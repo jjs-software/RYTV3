@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RYTV3.exe" size="91616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RYTV3.exe" size="92160">
       <assemblyIdentity name="RYTV3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0HS45qzsiKcqiLd1xFZh9fPJLHPU/QOcXj4GshlqMEM=</dsig:DigestValue>
+        <dsig:DigestValue>uhyUwITNGYBgm8pfKGoEl2KCjb6jPWhPb/KCWQwabTA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

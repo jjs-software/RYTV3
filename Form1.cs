@@ -203,6 +203,7 @@ namespace RYTV3
             fileex = File.Exists(filelocation);
             if (fileex == false)
             {
+                error_lb.Items.Add("File Does not exist");
                 return;
             }
             using (StreamReader Reader = new StreamReader(filelocation))
@@ -256,6 +257,7 @@ namespace RYTV3
                 if (checkfile == false)
                 {
                     MessageBox.Show("Please Load youtube list First");
+                    error_lb.Items.Add("No youtube list Provided");
                     return;
                 } // end of if statement
                 // Zero = 1 Count starts at Zero instead of 1
@@ -282,6 +284,7 @@ namespace RYTV3
                         }
                         catch (Exception f)
                         {
+                            error_lb.Items.Add(f);
                             Console.WriteLine("{0} Exception caught.", f);
                             goto start0;
                         }
@@ -298,6 +301,10 @@ namespace RYTV3
                         }
                         // used for pb2 click
                         v2 = videoselection;
+                        if (v1 == v2)
+                        {
+                            goto start1;
+                        }
                         try
                         {
                             getytID(videoselection);
@@ -423,6 +430,15 @@ namespace RYTV3
         /// <param name="e"></param>
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            try
+            {
+                loadlist();
+            }
+            catch (Exception f)
+            {
+                error_lb.Items.Add(f);
+                Console.WriteLine("{0} Exception caught.", f);
+            }
             // set number spinner to 2
             numericUpDown1.Value = 2;
         }
@@ -433,32 +449,66 @@ namespace RYTV3
         /// <param name="e"></param>
         private void pb1_Click(object sender, EventArgs e)
         {
+            // added this code to prevent exception error when link is not set for all 5 pictureboxes 
+            if (v1 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v1);
         }
 
         private void pb2_Click(object sender, EventArgs e)
         {
+            if (v2 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v2);
         }
 
         private void pb3_Click(object sender, EventArgs e)
         {
+            if (v3 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v3);
         }
 
         private void pb4_Click(object sender, EventArgs e)
         {
+            if (v4 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v4);
         }
 
         private void pb5_Click(object sender, EventArgs e)
         {
+            if (v5 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v5);
         }
 
         private void pb6_Click(object sender, EventArgs e)
         {
+            if (v5 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v6);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            const string sPath = "logs.txt";
+            System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(sPath);
+            SaveFile.WriteLine(error_lb.Items);
+            SaveFile.ToString();
+            SaveFile.Close();
         }
     }
     }
