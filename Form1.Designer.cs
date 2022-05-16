@@ -32,8 +32,9 @@ namespace RYTV3
             this.formSkin1 = new FlatUI.FormSkin();
             this.flatTabControl1 = new FlatUI.FlatTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.flatLabel2 = new FlatUI.FlatLabel();
             this.getVids_btn = new FlatUI.FlatButton();
             this.gb6 = new FlatUI.FlatGroupBox();
@@ -49,6 +50,7 @@ namespace RYTV3
             this.gb1 = new FlatUI.FlatGroupBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.flatLabel4 = new FlatUI.FlatLabel();
             this.flatGroupBox3 = new FlatUI.FlatGroupBox();
             this.error_lb = new System.Windows.Forms.ListBox();
@@ -122,6 +124,7 @@ namespace RYTV3
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.flatLabel2);
@@ -139,15 +142,17 @@ namespace RYTV3
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Youtube";
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(680, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 19);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
-            this.label2.Visible = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(803, 615);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "label4";
             // 
             // label1
             // 
@@ -159,13 +164,23 @@ namespace RYTV3
             this.label1.Text = "label1";
             this.label1.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(680, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 19);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
             // flatLabel2
             // 
             this.flatLabel2.AutoSize = true;
             this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.flatLabel2.ForeColor = System.Drawing.Color.White;
-            this.flatLabel2.Location = new System.Drawing.Point(620, 616);
+            this.flatLabel2.Location = new System.Drawing.Point(586, 615);
             this.flatLabel2.Name = "flatLabel2";
             this.flatLabel2.Size = new System.Drawing.Size(216, 13);
             this.flatLabel2.TabIndex = 7;
@@ -177,10 +192,10 @@ namespace RYTV3
             this.getVids_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.getVids_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.getVids_btn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.getVids_btn.Location = new System.Drawing.Point(587, 549);
+            this.getVids_btn.Location = new System.Drawing.Point(560, 542);
             this.getVids_btn.Name = "getVids_btn";
             this.getVids_btn.Rounded = false;
-            this.getVids_btn.Size = new System.Drawing.Size(269, 59);
+            this.getVids_btn.Size = new System.Drawing.Size(322, 59);
             this.getVids_btn.TabIndex = 6;
             this.getVids_btn.Text = "Get Random Videos";
             this.getVids_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -345,6 +360,7 @@ namespace RYTV3
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.flatLabel4);
             this.tabPage2.Controls.Add(this.flatGroupBox3);
             this.tabPage2.Controls.Add(this.flatLabel3);
@@ -356,6 +372,17 @@ namespace RYTV3
             this.tabPage2.Size = new System.Drawing.Size(1338, 631);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(777, 609);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 19);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
             // 
             // flatLabel4
             // 
@@ -619,6 +646,8 @@ namespace RYTV3
         private FlatUI.FlatLabel flatLabel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

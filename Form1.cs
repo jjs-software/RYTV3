@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -468,6 +469,9 @@ namespace RYTV3
             try
             {
                 loadlist();
+                string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                label3.Text = "Version " + version; 
+                label4.Text = "Version " + version;
             }
             catch (Exception f)
             {
