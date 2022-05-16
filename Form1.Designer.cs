@@ -32,6 +32,8 @@ namespace RYTV3
             this.formSkin1 = new FlatUI.FormSkin();
             this.flatTabControl1 = new FlatUI.FlatTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.flatLabel2 = new FlatUI.FlatLabel();
             this.getVids_btn = new FlatUI.FlatButton();
             this.gb6 = new FlatUI.FlatGroupBox();
@@ -47,10 +49,10 @@ namespace RYTV3
             this.gb1 = new FlatUI.FlatGroupBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.flatLabel4 = new FlatUI.FlatLabel();
             this.flatGroupBox3 = new FlatUI.FlatGroupBox();
             this.error_lb = new System.Windows.Forms.ListBox();
             this.flatLabel3 = new FlatUI.FlatLabel();
-            this.flatAlertBox1 = new FlatUI.FlatAlertBox();
             this.flatGroupBox2 = new FlatUI.FlatGroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.flatGroupBox1 = new FlatUI.FlatGroupBox();
@@ -84,7 +86,7 @@ namespace RYTV3
             // 
             // formSkin1
             // 
-            this.formSkin1.BackColor = System.Drawing.Color.White;
+            this.formSkin1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.formSkin1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.formSkin1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.formSkin1.Controls.Add(this.flatTabControl1);
@@ -120,6 +122,8 @@ namespace RYTV3
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.flatLabel2);
             this.tabPage1.Controls.Add(this.getVids_btn);
             this.tabPage1.Controls.Add(this.gb6);
@@ -134,6 +138,26 @@ namespace RYTV3
             this.tabPage1.Size = new System.Drawing.Size(1338, 631);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Youtube";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(680, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 19);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(224, 524);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 19);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // flatLabel2
             // 
@@ -321,9 +345,9 @@ namespace RYTV3
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.flatLabel4);
             this.tabPage2.Controls.Add(this.flatGroupBox3);
             this.tabPage2.Controls.Add(this.flatLabel3);
-            this.tabPage2.Controls.Add(this.flatAlertBox1);
             this.tabPage2.Controls.Add(this.flatGroupBox2);
             this.tabPage2.Controls.Add(this.flatGroupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
@@ -333,6 +357,18 @@ namespace RYTV3
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
             // 
+            // flatLabel4
+            // 
+            this.flatLabel4.AutoSize = true;
+            this.flatLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel4.Font = new System.Drawing.Font("Segoe UI Historic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatLabel4.Location = new System.Drawing.Point(462, 14);
+            this.flatLabel4.Name = "flatLabel4";
+            this.flatLabel4.Size = new System.Drawing.Size(471, 65);
+            this.flatLabel4.TabIndex = 10;
+            this.flatLabel4.Text = "Application Settings";
+            // 
             // flatGroupBox3
             // 
             this.flatGroupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
@@ -340,7 +376,7 @@ namespace RYTV3
             this.flatGroupBox3.Controls.Add(this.error_lb);
             this.flatGroupBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flatGroupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.flatGroupBox3.Location = new System.Drawing.Point(289, 35);
+            this.flatGroupBox3.Location = new System.Drawing.Point(278, 287);
             this.flatGroupBox3.Name = "flatGroupBox3";
             this.flatGroupBox3.ShowText = true;
             this.flatGroupBox3.Size = new System.Drawing.Size(912, 240);
@@ -351,7 +387,7 @@ namespace RYTV3
             // 
             // error_lb
             // 
-            this.error_lb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.error_lb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.error_lb.ForeColor = System.Drawing.SystemColors.Info;
             this.error_lb.FormattingEnabled = true;
             this.error_lb.ItemHeight = 25;
@@ -368,43 +404,32 @@ namespace RYTV3
             this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.flatLabel3.ForeColor = System.Drawing.Color.White;
-            this.flatLabel3.Location = new System.Drawing.Point(533, 613);
+            this.flatLabel3.Location = new System.Drawing.Point(555, 613);
             this.flatLabel3.Name = "flatLabel3";
             this.flatLabel3.Size = new System.Drawing.Size(216, 13);
             this.flatLabel3.TabIndex = 8;
             this.flatLabel3.Text = "© 2022 Jeremy Stevens / JJS Software LLC";
             // 
-            // flatAlertBox1
-            // 
-            this.flatAlertBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.flatAlertBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flatAlertBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.flatAlertBox1.kind = FlatUI.FlatAlertBox._Kind.Info;
-            this.flatAlertBox1.Location = new System.Drawing.Point(36, 291);
-            this.flatAlertBox1.Name = "flatAlertBox1";
-            this.flatAlertBox1.Size = new System.Drawing.Size(187, 42);
-            this.flatAlertBox1.TabIndex = 2;
-            this.flatAlertBox1.Text = "OK";
-            this.flatAlertBox1.Visible = false;
-            // 
             // flatGroupBox2
             // 
-            this.flatGroupBox2.BackColor = System.Drawing.Color.White;
+            this.flatGroupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.flatGroupBox2.BaseColor = System.Drawing.Color.Empty;
             this.flatGroupBox2.Controls.Add(this.numericUpDown1);
             this.flatGroupBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.flatGroupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.flatGroupBox2.Location = new System.Drawing.Point(36, 172);
+            this.flatGroupBox2.Location = new System.Drawing.Point(721, 122);
             this.flatGroupBox2.Name = "flatGroupBox2";
             this.flatGroupBox2.ShowText = true;
-            this.flatGroupBox2.Size = new System.Drawing.Size(187, 103);
+            this.flatGroupBox2.Size = new System.Drawing.Size(212, 159);
             this.flatGroupBox2.TabIndex = 1;
             this.flatGroupBox2.Text = "Step 2: Number of Choices";
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(23, 49);
+            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.numericUpDown1.Location = new System.Drawing.Point(35, 72);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             6,
             0,
@@ -427,17 +452,17 @@ namespace RYTV3
             // 
             // flatGroupBox1
             // 
-            this.flatGroupBox1.BackColor = System.Drawing.Color.White;
+            this.flatGroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.flatGroupBox1.BaseColor = System.Drawing.Color.Empty;
             this.flatGroupBox1.Controls.Add(this.status_lbl);
             this.flatGroupBox1.Controls.Add(this.flatLabel1);
             this.flatGroupBox1.Controls.Add(this.loadList_btn);
             this.flatGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.flatGroupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.flatGroupBox1.Location = new System.Drawing.Point(36, 35);
+            this.flatGroupBox1.Location = new System.Drawing.Point(436, 122);
             this.flatGroupBox1.Name = "flatGroupBox1";
             this.flatGroupBox1.ShowText = true;
-            this.flatGroupBox1.Size = new System.Drawing.Size(187, 103);
+            this.flatGroupBox1.Size = new System.Drawing.Size(243, 159);
             this.flatGroupBox1.TabIndex = 0;
             this.flatGroupBox1.Text = "Step 1: Load youtube list";
             // 
@@ -447,7 +472,7 @@ namespace RYTV3
             this.status_lbl.BackColor = System.Drawing.Color.Transparent;
             this.status_lbl.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.status_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.status_lbl.Location = new System.Drawing.Point(66, 87);
+            this.status_lbl.Location = new System.Drawing.Point(98, 138);
             this.status_lbl.Name = "status_lbl";
             this.status_lbl.Size = new System.Drawing.Size(92, 13);
             this.status_lbl.TabIndex = 3;
@@ -459,7 +484,7 @@ namespace RYTV3
             this.flatLabel1.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flatLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatLabel1.Location = new System.Drawing.Point(23, 87);
+            this.flatLabel1.Location = new System.Drawing.Point(55, 138);
             this.flatLabel1.Name = "flatLabel1";
             this.flatLabel1.Size = new System.Drawing.Size(42, 13);
             this.flatLabel1.TabIndex = 2;
@@ -471,7 +496,7 @@ namespace RYTV3
             this.loadList_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.loadList_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loadList_btn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.loadList_btn.Location = new System.Drawing.Point(23, 44);
+            this.loadList_btn.Location = new System.Drawing.Point(47, 69);
             this.loadList_btn.Name = "loadList_btn";
             this.loadList_btn.Rounded = false;
             this.loadList_btn.Size = new System.Drawing.Size(143, 32);
@@ -577,7 +602,6 @@ namespace RYTV3
         private FlatUI.FlatGroupBox gb1;
         private FlatUI.FlatGroupBox gb6;
         private FlatUI.FlatGroupBox gb5;
-        private FlatUI.FlatAlertBox flatAlertBox1;
         private FlatUI.FlatLabel status_lbl;
         private FlatUI.FlatLabel flatLabel1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
@@ -592,6 +616,9 @@ namespace RYTV3
         private FlatUI.FlatLabel flatLabel3;
         private FlatUI.FlatGroupBox flatGroupBox3;
         private System.Windows.Forms.ListBox error_lb;
+        private FlatUI.FlatLabel flatLabel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

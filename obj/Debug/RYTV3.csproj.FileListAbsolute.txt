@@ -18,7 +18,6 @@ C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\RYTV3.exe.manifest
 C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\RYTV3.application
 C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\RYTV3.exe
 C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\RYTV3.pdb
-C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.csproj.AssemblyReference.cache
 C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.Form1.resources
 C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.Properties.Resources.resources
 C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.csproj.GenerateResource.cache
@@ -28,3 +27,11 @@ C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.exe.manifest
 C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.application
 C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.exe
 C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.pdb
+C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\libvideo.dll
+C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\NiL.JS.dll
+C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nites\Documents\GitHub\RYTV3\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.csproj.AssemblyReference.cache
+C:\Users\nites\Documents\GitHub\RYTV3\obj\Debug\RYTV3.csproj.CopyComplete

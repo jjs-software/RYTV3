@@ -9,7 +9,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlatUI;
 using RYTV3;
+using VideoLibrary;
+
 namespace RYTV3
 {
     public partial class Form1 : Form
@@ -19,6 +22,7 @@ namespace RYTV3
         private int numberofVideos = 1;
         public int videonumbers;
         public string videoselection;
+        public string videoselection2;
         public string ytid;
         public string thumbnail;
         static Random rnd = new Random();
@@ -28,6 +32,7 @@ namespace RYTV3
         public string v4;
         public string v5;
         public string v6;
+        public string videotitle;
         public List<String> youtubelist = new List<String>();
         public Form1()
         {
@@ -67,7 +72,7 @@ namespace RYTV3
                         var youtubelist = new List<string>(videolist);
                         // count the number of videos 
                         var lineCount = File.ReadAllLines(filePath).Length;
-                        status_lbl.ForeColor = Color.Blue;
+                        status_lbl.ForeColor = Color.White;
                         status_lbl.Text = Convert.ToString(lineCount) + " Videos Loaded";
                     }
                 }
@@ -82,7 +87,7 @@ namespace RYTV3
             switch (number)
             {
                 case 1:
-                    // only show 1 groupbox 
+                    // only show 1 groupbox
                     gb1.Show();
                     gb2.Hide();
                     gb3.Hide();
@@ -98,6 +103,8 @@ namespace RYTV3
                 case 2:
                     // move groupbox back to default location
                     gb1.Location = new Point(200, 69);
+                    label1.Location = new Point(203, 69);
+                    label1.BackColor = Color.Red;
                     // reset to gb1 to default size
                     gb1.Width = 522;
                     gb1.Height = 422;
@@ -241,6 +248,31 @@ namespace RYTV3
             int r = rnd.Next(youtubelist.Count);
             videoselection = (string)youtubelist[r];
         }
+
+        /////////
+        /// 
+        private void RndVideo2()
+        {
+            loadlist();
+            int r = rnd.Next(youtubelist.Count);
+            videoselection2 = (string)youtubelist[r];
+        }
+
+        /// <summary>
+        /// GET Youtube Title
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public string getTitle(string url)
+        {
+
+            YouTube ytb = YouTube.Default; //starting point for YouTube actions
+            var vid = ytb.GetVideo(url); // gets a Video object with info about the video
+            string ttl = vid.Title;//get video Title
+            Properties.Settings.Default.title = ttl;
+            return ttl;
+
+        }
         /// <summary>
         /// Get a Random Videos button
         /// </summary>
@@ -262,6 +294,7 @@ namespace RYTV3
                 } // end of if statement
                 // Zero = 1 Count starts at Zero instead of 1
                 // this switch provide each picturebox with a video choice based on how many groupboxes are displayed.
+                Console.WriteLine(i);
                 switch (i)
                 {
                     // Only 1 Video
@@ -271,13 +304,18 @@ namespace RYTV3
                         t.Start();
                         if (videoselection == null)
                         {
-                            RndVideo();
+                            t.Join();
+                            goto start0;
                         }
                         // link used for pb click
                         v1 = videoselection;
+                        //string title1 = getTitle(v1);
+                        //label1.Text = title1;
+                        
                         //Console.WriteLine(videoselection);
                         try
                         {
+                           
                             getytID(videoselection);
                             pb1.Load(thumbnail);
                             //pb11.LoadImage(thumbnail);
@@ -293,21 +331,18 @@ namespace RYTV3
                     // Two Videos 
                     case 1:
                     start1:
-                        Thread t1 = new Thread(new ThreadStart(RndVideo));
+                        Thread t1 = new Thread(new ThreadStart(RndVideo2));
                         t1.Start();
-                        if (videoselection == null)
+                        if (videoselection2 == null)
                         {
-                            RndVideo();
-                        }
-                        // used for pb2 click
-                        v2 = videoselection;
-                        if (v1 == v2)
-                        {
+                            t1.Join();
                             goto start1;
                         }
+                        // used for pb2 click
+                        v2 = videoselection2;
                         try
                         {
-                            getytID(videoselection);
+                            getytID(videoselection2);
                             Console.WriteLine(thumbnail);
                             pb2.Load(thumbnail);
                             //pb11.LoadImage(thumbnail);
