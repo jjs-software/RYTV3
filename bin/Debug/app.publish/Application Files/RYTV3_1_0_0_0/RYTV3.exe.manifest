@@ -4,7 +4,7 @@
   <description asmv2:iconFile="youtube-logo-png-46020-Windows.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="RYTV3" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="RYTV3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="RYTV3.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,72 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="libvideo.dll" size="49664">
-      <assemblyIdentity name="libvideo" version="3.1.9.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RYTV3.exe" size="91616">
+      <assemblyIdentity name="RYTV3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EJCY6hnwYjJZDMTEHcv2jgwU5K17Y/jJwooElcEZSAU=</dsig:DigestValue>
+        <dsig:DigestValue>0HS45qzsiKcqiLd1xFZh9fPJLHPU/QOcXj4GshlqMEM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
-      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NiL.JS.dll" size="521728">
-      <assemblyIdentity name="NiL.JS" version="2.5.1514.0" publicKeyToken="FA941A7C2A4DE689" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Brc0bvunSFPH3DoZ+PgoQ8XISAhe5evrdmzM902+684=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RYTV3.exe" size="94688">
-      <assemblyIdentity name="RYTV3" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>p04sL83rwsRBDjzWTk1dxQ/5Rkm5HQLyzWuiqZj98XU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Diagnostics.DiagnosticSource.dll" size="35760">
-      <assemblyIdentity name="System.Diagnostics.DiagnosticSource" version="4.0.1.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0iEzgYowMT4L7PAQ14pValazTqNh29M1iMmBdjH+1UA=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <file name="RYTV3.exe.config" size="898">
+  <file name="RYTV3.exe.config" size="189">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>j/MNtojPFy/bv6jDaHE8869sDjKcT0nCIXHypJwSZ2g=</dsig:DigestValue>
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="youtube-logo-png-46020-Windows.ico" size="16958">
@@ -137,4 +89,4 @@
       <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     </application>
   </compatibility>
-<publisherIdentity name="CN=LAPTOP-94RQTRR7\WINGS" issuerKeyHash="4cb0ae08cdad20861cc0be7c5a9208cbe256310c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>VV3RnsndBC7F1cG8Xa1WztJ/qyhGmwYUwrYbpDYAnew=</DigestValue></Reference></SignedInfo><SignatureValue>jyk41NqSAqAtR5NXT/A+hCHKo+0ZdoHU6JoG6CZf8dbLsaKgBcIy7F9u46nhpLyK9RYJGY9EV+5TfY5IgbFeSA50D1BRqsYUc7coqx6IeTpos8+yOxLkUKavZ2+/z82LdCKr2ToGaSsOnevL19HyUnTrLU1ZX/vj67Q1GSN60f4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sI57pG6/+gpf2v9Mgs0V1jlV52ViAHGiuQeasFccA/D0aj/P5W2DJnPtL0IhXBll4iaMS7SwU+c80vkcysrQmsrzBflxIfX8VLJXX/RO5qPHhkq8XUDrSkdNAeA0GquWely4IBFK3nB0Cyqfha6fheswjcKtuYECr0oREcznEO0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ec9d0036a41bb6c214069b4628ab7fd2ce56ad5dbcc1d5c52e04ddc99ed15d55" Description="" Url=""><as:assemblyIdentity name="RYTV3.exe" version="1.0.0.0" publicKeyToken="d555110f4b8d6476" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-94RQTRR7\WINGS</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>HVj6sRhcXgXJC25myn5UJhZeW3Acqy86M2qSsNR4HVQ=</DigestValue></Reference></SignedInfo><SignatureValue>VtA9Sy36Xj3BNA3pwK6tGVEvPPSm52Ghd/5mCss8RXHnBOKsZY37usE8NIwwIXt+skASJQVaLy6IOENgh+2iBewVqLkqturyrNk0htoONQoo7rUsQWHeQ0rlk7XfzM68eVw3nG7IoN8CP+JEmH9jQ81QZJiqkoYAaajoZzPQBds=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sI57pG6/+gpf2v9Mgs0V1jlV52ViAHGiuQeasFccA/D0aj/P5W2DJnPtL0IhXBll4iaMS7SwU+c80vkcysrQmsrzBflxIfX8VLJXX/RO5qPHhkq8XUDrSkdNAeA0GquWely4IBFK3nB0Cyqfha6fheswjcKtuYECr0oREcznEO0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQTAQTTwkdtaRO6BIN/ojAmjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioATABBAFAAVABPAFAALQA5ADQAUgBRAFQAUgBSADcAXABXAEkATgBHAFMwHhcNMjIwMjA5MTYyODU2WhcNMjMwMjA5MjIyODU2WjA1MTMwMQYDVQQDHioATABBAFAAVABPAFAALQA5ADQAUgBRAFQAUgBSADcAXABXAEkATgBHAFMwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALCOe6Ruv/oKX9r/TILNFdY5VedlYgBxorkHmrBXHAPw9Go/z+VtgyZz7S9CIVwZZeImjEu0sFPnPNL5HMrK0JrK8wX5cSH1/FSyV1/0Tuajx4ZKvF1A60pHTQHgNBqrlnpcuCARSt5wdAsqn4Wun4XrMI3CrbmBAq9KERHM5xDtAgMBAAEwDQYJKoZIhvcNAQELBQADgYEATgK30cAo0ZHDmqqw3rG9ay9DLinaD7h8Cv31kWQ994KdIU7uLerYhzEH/+TNzpWxLPLDzSiAmpNHEvCAXoJsrccd1qn85nwIezg52+u0LGvh4CLaW4uKrsS9JGwtxsCmmgs6Cbpn4p0Z75vY5ja0Gr3h7OMpIvRgeKpWLHLeAGA=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=LAPTOP-94RQTRR7\WINGS" issuerKeyHash="4cb0ae08cdad20861cc0be7c5a9208cbe256310c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>lEqh9HnF8jAVdSWHrLZfEzq08N6Hiaup/rYd4tBPZDI=</DigestValue></Reference></SignedInfo><SignatureValue>NfM2J3qnog8/Ik7HuaFK98mJ60x/3L1mA3gjMEScIqd6u84fs4cN4KDSYJ8OeYLrQNQ+btO3zYiakKxUX6N3nfaJ4Z7g2ukjD48HI3DYqa6B7cL5rlbj/KNVMqwqTJioK50OuP/lPJlss2ET4aYTlr2AIQVPVVuHFs7USNBnceY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sI57pG6/+gpf2v9Mgs0V1jlV52ViAHGiuQeasFccA/D0aj/P5W2DJnPtL0IhXBll4iaMS7SwU+c80vkcysrQmsrzBflxIfX8VLJXX/RO5qPHhkq8XUDrSkdNAeA0GquWely4IBFK3nB0Cyqfha6fheswjcKtuYECr0oREcznEO0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="32644fd0e21db6fea9ab8987def0b43a135fb6ac8725751530f2c579f4a14a94" Description="" Url=""><as:assemblyIdentity name="RYTV3.exe" version="1.0.0.0" publicKeyToken="d555110f4b8d6476" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-94RQTRR7\WINGS</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>2Tq/C9dbMA3DHEIkaUlRSOxN4I40ZdRWn5tNyvov1/s=</DigestValue></Reference></SignedInfo><SignatureValue>AaxWNOIufL9/wRI8UN1c+TSa4aOvTMNt9zvu28gRl/wK2VjQ0TUJBbdT9Jb7RQEtgrnBO+gAYY8Pb/MvfWH4yBjE5prYQ8XXXJXZqULNcB8b1oErNLMAVPOTFV8Wu22DnE14rq0cE1VJ9yR1JiZZVhpMGEnKfXS6VG9Pn+45QvY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sI57pG6/+gpf2v9Mgs0V1jlV52ViAHGiuQeasFccA/D0aj/P5W2DJnPtL0IhXBll4iaMS7SwU+c80vkcysrQmsrzBflxIfX8VLJXX/RO5qPHhkq8XUDrSkdNAeA0GquWely4IBFK3nB0Cyqfha6fheswjcKtuYECr0oREcznEO0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQTAQTTwkdtaRO6BIN/ojAmjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioATABBAFAAVABPAFAALQA5ADQAUgBRAFQAUgBSADcAXABXAEkATgBHAFMwHhcNMjIwMjA5MTYyODU2WhcNMjMwMjA5MjIyODU2WjA1MTMwMQYDVQQDHioATABBAFAAVABPAFAALQA5ADQAUgBRAFQAUgBSADcAXABXAEkATgBHAFMwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALCOe6Ruv/oKX9r/TILNFdY5VedlYgBxorkHmrBXHAPw9Go/z+VtgyZz7S9CIVwZZeImjEu0sFPnPNL5HMrK0JrK8wX5cSH1/FSyV1/0Tuajx4ZKvF1A60pHTQHgNBqrlnpcuCARSt5wdAsqn4Wun4XrMI3CrbmBAq9KERHM5xDtAgMBAAEwDQYJKoZIhvcNAQELBQADgYEATgK30cAo0ZHDmqqw3rG9ay9DLinaD7h8Cv31kWQ994KdIU7uLerYhzEH/+TNzpWxLPLDzSiAmpNHEvCAXoJsrccd1qn85nwIezg52+u0LGvh4CLaW4uKrsS9JGwtxsCmmgs6Cbpn4p0Z75vY5ja0Gr3h7OMpIvRgeKpWLHLeAGA=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
