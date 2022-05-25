@@ -32,13 +32,22 @@ namespace RYTV3
             this.formSkin1 = new FlatUI.FormSkin();
             this.flatTabControl1 = new FlatUI.FlatTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.flatLabel2 = new FlatUI.FlatLabel();
+            this.getVids_btn = new FlatUI.FlatButton();
             this.gb6 = new FlatUI.FlatGroupBox();
+            this.pb6 = new System.Windows.Forms.PictureBox();
             this.gb5 = new FlatUI.FlatGroupBox();
+            this.pb5 = new System.Windows.Forms.PictureBox();
             this.gb4 = new FlatUI.FlatGroupBox();
+            this.pb4 = new System.Windows.Forms.PictureBox();
             this.gb3 = new FlatUI.FlatGroupBox();
+            this.pb3 = new System.Windows.Forms.PictureBox();
             this.gb2 = new FlatUI.FlatGroupBox();
+            this.pb2 = new System.Windows.Forms.PictureBox();
             this.gb1 = new FlatUI.FlatGroupBox();
+            this.pb1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.flatLabel3 = new FlatUI.FlatLabel();
             this.flatAlertBox1 = new FlatUI.FlatAlertBox();
             this.flatGroupBox2 = new FlatUI.FlatGroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -49,34 +58,25 @@ namespace RYTV3
             this.flatMax1 = new FlatUI.FlatMax();
             this.flatMini1 = new FlatUI.FlatMini();
             this.flatClose1 = new FlatUI.FlatClose();
-            this.pb1 = new System.Windows.Forms.PictureBox();
-            this.pb2 = new System.Windows.Forms.PictureBox();
-            this.pb3 = new System.Windows.Forms.PictureBox();
-            this.pb4 = new System.Windows.Forms.PictureBox();
-            this.pb5 = new System.Windows.Forms.PictureBox();
-            this.pb6 = new System.Windows.Forms.PictureBox();
-            this.getVids_btn = new FlatUI.FlatButton();
-            this.flatLabel2 = new FlatUI.FlatLabel();
-            this.flatLabel3 = new FlatUI.FlatLabel();
             this.formSkin1.SuspendLayout();
             this.flatTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gb6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
             this.gb5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
             this.gb4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
             this.gb3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
             this.gb2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             this.gb1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.flatGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.flatGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
             this.SuspendLayout();
             // 
             // formSkin1
@@ -132,6 +132,33 @@ namespace RYTV3
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Youtube";
             // 
+            // flatLabel2
+            // 
+            this.flatLabel2.AutoSize = true;
+            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatLabel2.ForeColor = System.Drawing.Color.White;
+            this.flatLabel2.Location = new System.Drawing.Point(620, 616);
+            this.flatLabel2.Name = "flatLabel2";
+            this.flatLabel2.Size = new System.Drawing.Size(216, 13);
+            this.flatLabel2.TabIndex = 7;
+            this.flatLabel2.Text = "© 2022 Jeremy Stevens / JJS Software LLC";
+            // 
+            // getVids_btn
+            // 
+            this.getVids_btn.BackColor = System.Drawing.Color.Transparent;
+            this.getVids_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.getVids_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.getVids_btn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.getVids_btn.Location = new System.Drawing.Point(587, 549);
+            this.getVids_btn.Name = "getVids_btn";
+            this.getVids_btn.Rounded = false;
+            this.getVids_btn.Size = new System.Drawing.Size(269, 59);
+            this.getVids_btn.TabIndex = 6;
+            this.getVids_btn.Text = "Get Random Videos";
+            this.getVids_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.getVids_btn.Click += new System.EventHandler(this.getVids_btn_Click);
+            // 
             // gb6
             // 
             this.gb6.BackColor = System.Drawing.Color.Pink;
@@ -144,6 +171,19 @@ namespace RYTV3
             this.gb6.Size = new System.Drawing.Size(332, 220);
             this.gb6.TabIndex = 5;
             this.gb6.Text = "#6";
+            // 
+            // pb6
+            // 
+            this.pb6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb6.Location = new System.Drawing.Point(10, 10);
+            this.pb6.Name = "pb6";
+            this.pb6.Size = new System.Drawing.Size(312, 200);
+            this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb6.TabIndex = 8;
+            this.pb6.TabStop = false;
+            this.pb6.Click += new System.EventHandler(this.pb6_Click);
             // 
             // gb5
             // 
@@ -158,6 +198,19 @@ namespace RYTV3
             this.gb5.TabIndex = 4;
             this.gb5.Text = "#5";
             // 
+            // pb5
+            // 
+            this.pb5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb5.Location = new System.Drawing.Point(10, 10);
+            this.pb5.Name = "pb5";
+            this.pb5.Size = new System.Drawing.Size(312, 200);
+            this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb5.TabIndex = 8;
+            this.pb5.TabStop = false;
+            this.pb5.Click += new System.EventHandler(this.pb5_Click);
+            // 
             // gb4
             // 
             this.gb4.BackColor = System.Drawing.Color.Yellow;
@@ -170,6 +223,19 @@ namespace RYTV3
             this.gb4.Size = new System.Drawing.Size(332, 220);
             this.gb4.TabIndex = 3;
             this.gb4.Text = "#4";
+            // 
+            // pb4
+            // 
+            this.pb4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb4.Location = new System.Drawing.Point(10, 10);
+            this.pb4.Name = "pb4";
+            this.pb4.Size = new System.Drawing.Size(312, 200);
+            this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4.TabIndex = 7;
+            this.pb4.TabStop = false;
+            this.pb4.Click += new System.EventHandler(this.pb4_Click);
             // 
             // gb3
             // 
@@ -184,6 +250,19 @@ namespace RYTV3
             this.gb3.TabIndex = 2;
             this.gb3.Text = "#3";
             // 
+            // pb3
+            // 
+            this.pb3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb3.Location = new System.Drawing.Point(10, 10);
+            this.pb3.Name = "pb3";
+            this.pb3.Size = new System.Drawing.Size(312, 200);
+            this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3.TabIndex = 7;
+            this.pb3.TabStop = false;
+            this.pb3.Click += new System.EventHandler(this.pb3_Click);
+            // 
             // gb2
             // 
             this.gb2.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -196,6 +275,19 @@ namespace RYTV3
             this.gb2.Size = new System.Drawing.Size(332, 220);
             this.gb2.TabIndex = 1;
             this.gb2.Text = "#2";
+            // 
+            // pb2
+            // 
+            this.pb2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb2.Location = new System.Drawing.Point(10, 10);
+            this.pb2.Name = "pb2";
+            this.pb2.Size = new System.Drawing.Size(312, 200);
+            this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2.TabIndex = 6;
+            this.pb2.TabStop = false;
+            this.pb2.Click += new System.EventHandler(this.pb2_Click);
             // 
             // gb1
             // 
@@ -210,6 +302,19 @@ namespace RYTV3
             this.gb1.TabIndex = 0;
             this.gb1.Text = "#1";
             // 
+            // pb1
+            // 
+            this.pb1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb1.Location = new System.Drawing.Point(9, 10);
+            this.pb1.Name = "pb1";
+            this.pb1.Size = new System.Drawing.Size(312, 200);
+            this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1.TabIndex = 0;
+            this.pb1.TabStop = false;
+            this.pb1.Click += new System.EventHandler(this.pb1_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
@@ -223,6 +328,18 @@ namespace RYTV3
             this.tabPage2.Size = new System.Drawing.Size(1338, 631);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
+            // 
+            // flatLabel3
+            // 
+            this.flatLabel3.AutoSize = true;
+            this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatLabel3.ForeColor = System.Drawing.Color.White;
+            this.flatLabel3.Location = new System.Drawing.Point(533, 613);
+            this.flatLabel3.Name = "flatLabel3";
+            this.flatLabel3.Size = new System.Drawing.Size(216, 13);
+            this.flatLabel3.TabIndex = 8;
+            this.flatLabel3.Text = "© 2022 Jeremy Stevens / JJS Software LLC";
             // 
             // flatAlertBox1
             // 
@@ -369,123 +486,6 @@ namespace RYTV3
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // pb1
-            // 
-            this.pb1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb1.Location = new System.Drawing.Point(9, 10);
-            this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(312, 200);
-            this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb1.TabIndex = 0;
-            this.pb1.TabStop = false;
-            this.pb1.Click += new System.EventHandler(this.pb1_Click);
-            // 
-            // pb2
-            // 
-            this.pb2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb2.Location = new System.Drawing.Point(10, 10);
-            this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(312, 200);
-            this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb2.TabIndex = 6;
-            this.pb2.TabStop = false;
-            this.pb2.Click += new System.EventHandler(this.pb2_Click);
-            // 
-            // pb3
-            // 
-            this.pb3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb3.Location = new System.Drawing.Point(10, 10);
-            this.pb3.Name = "pb3";
-            this.pb3.Size = new System.Drawing.Size(312, 200);
-            this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb3.TabIndex = 7;
-            this.pb3.TabStop = false;
-            this.pb3.Click += new System.EventHandler(this.pb3_Click);
-            // 
-            // pb4
-            // 
-            this.pb4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb4.Location = new System.Drawing.Point(10, 10);
-            this.pb4.Name = "pb4";
-            this.pb4.Size = new System.Drawing.Size(312, 200);
-            this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb4.TabIndex = 7;
-            this.pb4.TabStop = false;
-            this.pb4.Click += new System.EventHandler(this.pb4_Click);
-            // 
-            // pb5
-            // 
-            this.pb5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb5.Location = new System.Drawing.Point(10, 10);
-            this.pb5.Name = "pb5";
-            this.pb5.Size = new System.Drawing.Size(312, 200);
-            this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb5.TabIndex = 8;
-            this.pb5.TabStop = false;
-            this.pb5.Click += new System.EventHandler(this.pb5_Click);
-            // 
-            // pb6
-            // 
-            this.pb6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb6.Location = new System.Drawing.Point(10, 10);
-            this.pb6.Name = "pb6";
-            this.pb6.Size = new System.Drawing.Size(312, 200);
-            this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb6.TabIndex = 8;
-            this.pb6.TabStop = false;
-            this.pb6.Click += new System.EventHandler(this.pb6_Click);
-            // 
-            // getVids_btn
-            // 
-            this.getVids_btn.BackColor = System.Drawing.Color.Transparent;
-            this.getVids_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.getVids_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.getVids_btn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.getVids_btn.Location = new System.Drawing.Point(587, 549);
-            this.getVids_btn.Name = "getVids_btn";
-            this.getVids_btn.Rounded = false;
-            this.getVids_btn.Size = new System.Drawing.Size(269, 59);
-            this.getVids_btn.TabIndex = 6;
-            this.getVids_btn.Text = "Get Random Videos";
-            this.getVids_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.getVids_btn.Click += new System.EventHandler(this.getVids_btn_Click);
-            // 
-            // flatLabel2
-            // 
-            this.flatLabel2.AutoSize = true;
-            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatLabel2.ForeColor = System.Drawing.Color.White;
-            this.flatLabel2.Location = new System.Drawing.Point(620, 616);
-            this.flatLabel2.Name = "flatLabel2";
-            this.flatLabel2.Size = new System.Drawing.Size(216, 13);
-            this.flatLabel2.TabIndex = 7;
-            this.flatLabel2.Text = "© 2022 Jeremy Stevens / JJS Software LLC";
-            // 
-            // flatLabel3
-            // 
-            this.flatLabel3.AutoSize = true;
-            this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatLabel3.ForeColor = System.Drawing.Color.White;
-            this.flatLabel3.Location = new System.Drawing.Point(533, 613);
-            this.flatLabel3.Name = "flatLabel3";
-            this.flatLabel3.Size = new System.Drawing.Size(216, 13);
-            this.flatLabel3.TabIndex = 8;
-            this.flatLabel3.Text = "© 2022 Jeremy Stevens / JJS Software LLC";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,23 +503,23 @@ namespace RYTV3
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.gb6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
             this.gb5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
             this.gb4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
             this.gb3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
             this.gb2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             this.gb1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.flatGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.flatGroupBox1.ResumeLayout(false);
             this.flatGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
             this.ResumeLayout(false);
 
         }

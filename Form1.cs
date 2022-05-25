@@ -45,6 +45,8 @@ namespace RYTV3
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                videoselection = null;
+                youtubelist.Clear();
                 openFileDialog.InitialDirectory = "c:\\";
                 openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 2;
