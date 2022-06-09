@@ -300,6 +300,11 @@ namespace RYTV3
                         }
                         // used for pb2 click
                         v2 = videoselection;
+                        // check if there is duplicate videos if so get a new video. 
+                        if (v2 == v1)
+                        {
+                            goto start1;
+                        }
                         try
                         {
                             getytID(videoselection);
