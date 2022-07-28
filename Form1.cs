@@ -45,8 +45,6 @@ namespace RYTV3
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                videoselection = null;
-                youtubelist.Clear();
                 openFileDialog.InitialDirectory = "c:\\";
                 openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 2;
@@ -300,11 +298,6 @@ namespace RYTV3
                         }
                         // used for pb2 click
                         v2 = videoselection;
-                        // check if there is duplicate videos if so get a new video. 
-                        if (v2 == v1)
-                        {
-                            goto start1;
-                        }
                         try
                         {
                             getytID(videoselection);
@@ -440,32 +433,62 @@ namespace RYTV3
         /// <param name="e"></param>
         private void pb1_Click(object sender, EventArgs e)
         {
+            // Stop Null box clicks 
+            if (v1 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v1);
         }
 
         private void pb2_Click(object sender, EventArgs e)
         {
+            // Stop Null box clicks 
+            if (v2 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v2);
         }
 
         private void pb3_Click(object sender, EventArgs e)
         {
+            // Stop Null box clicks 
+            if (v3 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v3);
         }
 
         private void pb4_Click(object sender, EventArgs e)
         {
+            // Stop Null box clicks 
+            if (v4 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v4);
         }
 
         private void pb5_Click(object sender, EventArgs e)
         {
+            // Stop Null box clicks 
+            if (v5 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v5);
         }
 
         private void pb6_Click(object sender, EventArgs e)
         {
+            // Stop Null box clicks 
+            if (v6 == null)
+            {
+                return;
+            }
             System.Diagnostics.Process.Start(v6);
         }
-    }
+      }
     }
