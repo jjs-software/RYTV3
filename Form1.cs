@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
+using System.Reflection;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using RYTV3;
+using System.Speech.Synthesis;
+
 namespace RYTV3
 {
     public partial class Form1 : Form
@@ -29,6 +26,14 @@ namespace RYTV3
         public string v5;
         public string v6;
         public List<String> youtubelist = new List<String>();
+        /// <summary>
+        /// CONST
+        /// </summary>
+        // Day of the week
+        public string Q_Day;
+        // Current Month 
+        public string Q_Month;
+
         public Form1()
         {
             var fileContent = string.Empty;
@@ -258,7 +263,7 @@ namespace RYTV3
                     MessageBox.Show("Please Load youtube list First");
                     return;
                 } // end of if statement
-                // Zero = 1 Count starts at Zero instead of 1
+                // Zero = 1 (Count starts at Zero instead of 1)
                 // this switch provide each picturebox with a video choice based on how many groupboxes are displayed.
                 switch (i)
                 {
@@ -425,6 +430,8 @@ namespace RYTV3
         {
             // set number spinner to 2
             numericUpDown1.Value = 2;
+            string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            build_label.Text = String.Format("version {0}", version);
         }
         /// <summary>
         /// pb 1 click
@@ -490,5 +497,337 @@ namespace RYTV3
             }
             System.Diagnostics.Process.Start(v6);
         }
-      }
+        
+
+        ///
+        ////
+        ////  -   Start of Questions Section
+        ///
+        ///
+        /////
+
+        /// <summary>
+        ///  Days of the Week Button. 
+        ///  These buttonss
+        ///  
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        /// MONDAY 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string text = button1.Text;
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("Monday");
+            // Set Const For Day of the Week 
+            Q_Day = "Monday";
+        }
+
+        // TUESDAY 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("Tuesday");
+            // Set Const For Day of the Week 
+            Q_Day = "Tuesday";
+        }
+         /// <summary>
+         /// Wednesday
+         /// </summary>
+         /// <param name="sender"></param>
+         /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("Wednesday");
+            // Set Const For Day of the Week 
+            Q_Day = "Wednesday";
+        }
+         // THURSDAY--
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("Thursday");
+            // Set Const For Day of the Week 
+            Q_Day = "Thursday";
+        }
+
+         /// FRIDAY  
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("Friday");
+            // Set Const For Day of the Week 
+            Q_Day = "Friday";
+        }
+        // SATURDAY
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("Saturday");
+            // Set Const For Day of the Week 
+            Q_Day = "Saturday";
+        }
+         // SUNDAY 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("Sunday");
+            // Set Const For Day of the Week 
+            Q_Day = "Sunday";
+        }
+        /// <summary>
+        ///  GO TO NEXT TAB 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button8_Click(object sender, EventArgs e)
+        {
+            flatTabControl2.SelectedIndex = (flatTabControl2.SelectedIndex + 1 < flatTabControl2.TabCount) ?
+                             flatTabControl2.SelectedIndex + 1 : flatTabControl2.SelectedIndex;
+        }
+        ///
+        ///    WHAT MONTH IS IT?
+        /// 
+        /// <summary>
+        ///  January Button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button16_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("January");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "January";
+        }
+        // February Button 
+        private void button15_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("February");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "February";
+        }
+         /// <summary>
+         ///  March Button 
+         /// </summary>
+         /// <param name="sender"></param>
+         /// <param name="e"></param>
+        private void button14_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("March");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "March";
+        }
+        /// <summary>
+        ///  April Button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button13_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("April");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "April";
+        }
+        /// <summary>
+        ///   May Button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button12_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("May");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "May";
+        }
+        /// <summary>
+        ///    Month Of June Button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("June");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "June";
+        }
+        /// <summary>
+        ///  The Month of July
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button11_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("July");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "July";
+        }
+        /// <summary>
+        ///  The Month of August Button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button17_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("August");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "August";
+        }
+        /// <summary>
+        ///  The month of September Button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button18_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("September");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "September";
+        }
+        /// <summary>
+        ///  The month of October
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button19_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("October");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "October";
+        }
+        /// <summary>
+        /// The Month of Novmember 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button20_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("November");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "November";
+
+        }
+        /// <summary>
+        ///  The Month of December
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button21_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+
+            // Synchronous
+            synthesizer.Speak("December");
+            // Set Const For Day of the Week 
+            // Set Const for Month
+            Q_Month = "December";
+        }
+        /// <summary>
+        ///  Go to the nexdt Tab Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button9_Click(object sender, EventArgs e)
+        {
+            flatTabControl2.SelectedIndex = (flatTabControl2.SelectedIndex + 1 < flatTabControl2.TabCount) ?
+                            flatTabControl2.SelectedIndex + 1 : flatTabControl2.SelectedIndex;
+        }
+    }
     }

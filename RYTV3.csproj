@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\WINGS\Desktop\RYTV3\</PublishUrl>
+    <PublishUrl>C:\Users\WINGS\Desktop\RYTV3\V3\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -72,6 +72,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -121,6 +123,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Monday.PNG" />
+    <None Include="Resources\Tuesday.PNG" />
+    <None Include="Resources\Wednesday.PNG" />
+    <None Include="Resources\Thursday.PNG" />
+    <None Include="Resources\Friday.PNG" />
+    <None Include="Resources\Sunday.PNG" />
+    <None Include="Resources\Saturday.PNG" />
+    <None Include="Resources\Arrow_right.svg.png" />
+    <None Include="Resources\Jan.PNG" />
+    <None Include="Resources\Feb.PNG" />
+    <None Include="Resources\March.PNG" />
+    <None Include="Resources\Apr.PNG" />
+    <None Include="Resources\May.PNG" />
+    <None Include="Resources\June.PNG" />
+    <None Include="Resources\July.PNG" />
+    <None Include="Resources\Aug.PNG" />
+    <None Include="Resources\Sep.PNG" />
+    <None Include="Resources\Oct.PNG" />
+    <None Include="Resources\Nov.PNG" />
+    <None Include="Resources\Dev.PNG" />
     <Content Include="youtube-logo-png-46020-Windows.ico" />
   </ItemGroup>
   <ItemGroup>
