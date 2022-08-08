@@ -33,6 +33,12 @@ namespace RYTV3
         public string Q_Day;
         // Current Month 
         public string Q_Month;
+        // Current Date
+        public string Q_Date;
+        // Current Weather 
+        public string Q_Weather;
+        public string Q_Temp;
+
 
         public Form1()
         {
@@ -497,7 +503,7 @@ namespace RYTV3
             }
             System.Diagnostics.Process.Start(v6);
         }
-        
+
 
         ///
         ////
@@ -505,7 +511,73 @@ namespace RYTV3
         ///
         ///
         /////
+        /// 
 
+
+
+        //// =========== FUNCTIONS FOR QUESTIONS ==========
+        /// 
+          public void DaysOfTheWeek(string day)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+            synthesizer.Speak(day);
+            Q_Day = day;
+        }
+        public void CurrentMonth(string month)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+            synthesizer.Speak(month);
+            Q_Month = month;
+        }
+        public void MonthDate(string monthDate)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+            synthesizer.Speak(monthDate);
+            Q_Date = monthDate;
+        }
+        // Day of the Month
+        public void DateOfMonth(string Date)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+            synthesizer.Speak(Date);
+            Q_Date = Date;
+        }
+        /// <summary>
+        ///  Weather Function 
+        /// </summary>
+        /// <param name="Date"></param>
+        public void CurrentWeather(string Weather)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+            synthesizer.Speak("The Weather is" + Weather);
+            Q_Weather = Weather;
+        }
+
+        ///  The Temperature Function 
+        ///
+        ///
+        public void CurrentTemp(string temp)
+        {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            synthesizer.Volume = 100;  // 0...100
+            synthesizer.Rate = -2;     // -10...10
+            synthesizer.Speak("The Temperature is" + temp);
+            Q_Temp = temp;
+        }
+        
+
+            //// ============== END OF QUESTION FUNCTIONS ================
+        /// 
         /// <summary>
         ///  Days of the Week Button. 
         ///  These buttonss
@@ -517,93 +589,50 @@ namespace RYTV3
         /// MONDAY 
         private void button1_Click(object sender, EventArgs e)
         {
-            string text = button1.Text;
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
+            DaysOfTheWeek("Monday");
+            //string text = button1.Text;
+            //SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+            //synthesizer.Volume = 100;  // 0...100
+            //synthesizer.Rate = -2;     // -10...10
 
             // Synchronous
-            synthesizer.Speak("Monday");
+            //synthesizer.Speak("Monday");
             // Set Const For Day of the Week 
-            Q_Day = "Monday";
+            //Q_Day = "Monday";
         }
 
         // TUESDAY 
         private void button2_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("Tuesday");
-            // Set Const For Day of the Week 
-            Q_Day = "Tuesday";
+            DaysOfTheWeek("Tuesday");
         }
-         /// <summary>
          /// Wednesday
-         /// </summary>
-         /// <param name="sender"></param>
-         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("Wednesday");
-            // Set Const For Day of the Week 
-            Q_Day = "Wednesday";
+            DaysOfTheWeek("Wednesday");
         }
+
          // THURSDAY--
         private void button4_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("Thursday");
-            // Set Const For Day of the Week 
-            Q_Day = "Thursday";
+            DaysOfTheWeek("Thursday");
         }
 
          /// FRIDAY  
         private void button5_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("Friday");
-            // Set Const For Day of the Week 
-            Q_Day = "Friday";
+            DaysOfTheWeek("Friday");
         }
-        // SATURDAY
-        private void button6_Click(object sender, EventArgs e)
-        {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("Saturday");
-            // Set Const For Day of the Week 
-            Q_Day = "Saturday";
-        }
+        
          // SUNDAY 
         private void button7_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("Sunday");
-            // Set Const For Day of the Week 
-            Q_Day = "Sunday";
+            DaysOfTheWeek("Saturday");
+        }
+        // SUNDAY
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DaysOfTheWeek("Sunday");
         }
         /// <summary>
         ///  GO TO NEXT TAB 
@@ -625,28 +654,12 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button16_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("January");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "January";
+            CurrentMonth("January");
         }
         // February Button 
         private void button15_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("February");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "February";
+            CurrentMonth("February");
         }
          /// <summary>
          ///  March Button 
@@ -655,15 +668,7 @@ namespace RYTV3
          /// <param name="e"></param>
         private void button14_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("March");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "March";
+            CurrentMonth("March");
         }
         /// <summary>
         ///  April Button 
@@ -672,15 +677,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button13_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("April");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "April";
+            CurrentMonth("April");
         }
         /// <summary>
         ///   May Button 
@@ -689,15 +686,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button12_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("May");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "May";
+            CurrentMonth("May");
         }
         /// <summary>
         ///    Month Of June Button 
@@ -706,15 +695,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button10_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("June");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "June";
+            CurrentMonth("June");
         }
         /// <summary>
         ///  The Month of July
@@ -723,15 +704,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button11_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("July");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "July";
+            CurrentMonth("July");
         }
         /// <summary>
         ///  The Month of August Button 
@@ -740,15 +713,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button17_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("August");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "August";
+            CurrentMonth("August");
         }
         /// <summary>
         ///  The month of September Button 
@@ -757,15 +722,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button18_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("September");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "September";
+            CurrentMonth("September");
         }
         /// <summary>
         ///  The month of October
@@ -774,15 +731,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button19_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("October");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "October";
+            CurrentMonth("October");
         }
         /// <summary>
         /// The Month of Novmember 
@@ -791,15 +740,7 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button20_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("November");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "November";
+            CurrentMonth("November");
 
         }
         /// <summary>
@@ -809,18 +750,13 @@ namespace RYTV3
         /// <param name="e"></param>
         private void button21_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 100;  // 0...100
-            synthesizer.Rate = -2;     // -10...10
-
-            // Synchronous
-            synthesizer.Speak("December");
-            // Set Const For Day of the Week 
-            // Set Const for Month
-            Q_Month = "December";
+            CurrentMonth("December");
         }
+
+
         /// <summary>
-        ///  Go to the nexdt Tab Button
+        ///  Go to the next Tab Button (tab 3)
+        ///
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -828,6 +764,413 @@ namespace RYTV3
         {
             flatTabControl2.SelectedIndex = (flatTabControl2.SelectedIndex + 1 < flatTabControl2.TabCount) ?
                             flatTabControl2.SelectedIndex + 1 : flatTabControl2.SelectedIndex;
+        }
+        /// <summary>
+        ///  Numbers of the Month
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
+         ////
+         ///  Number 1 
+         ///
+        private void button22_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("1");
+        }
+        /// <summary>
+        ///  Number 2 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button23_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("2");
+        }
+        /// <summary>
+        ///  Number 3 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button24_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("3");
+        }
+        /// <summary>
+        ///  Number 4 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button25_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("4");
+        }
+        /// <summary>
+        ///   Number 5 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button26_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("5");
+        }
+        /// <summary>
+        ///  Number 6th
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button27_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("6");
+        }
+        /// <summary>
+        ///  Number 7tn 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button28_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("7");
+        }
+        /// <summary>
+        ///  number 8
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button35_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("8");
+        }
+        /// <summary>
+        /// Number 9
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button34_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("9");
+        }
+        /// <summary>
+        /// Number 10
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button33_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("10");
+        }
+        /// <summary>
+        ///  Number 11
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button53_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("11");
+        }
+        /// <summary>
+        ///  Number 12
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button32_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("12");
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("13");
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("14");
+        }
+        //number 15
+        private void button29_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("15");
+        }
+        /// <summary>
+        ///  Number 16 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button42_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("16");
+        }
+        /// <summary>
+        ///  Number 17
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button41_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("17");
+        }
+        /// <summary>
+        ///  Number 18
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button40_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("18");
+        }
+        /// <summary>
+        ///  Number 19
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button39_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("19");
+        }
+        /// <summary>
+        ///  Number 20
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button38_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("20");
+        }
+        /// <summary>
+        ///  Number 21 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button37_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("21");
+        }
+         /// <summary>
+         ///  Number 22 
+         /// </summary>
+         /// <param name="sender"></param>
+         /// <param name="e"></param>
+        private void button36_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("22");
+        }
+        /// <summary>
+        ///  Number 23 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button49_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("23");
+        }
+        /// <summary>
+        ///  Number 24 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button48_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("24");
+        }
+        /// <summary>
+        ///  Number 25  
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button47_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("25");
+        }
+        /// <summary>
+        ///  Number 26
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button46_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("26");
+        }
+        /// <summary>
+        /// Number 27 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button45_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("27");
+        }
+        /// <summary>
+        /// Number 28
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button44_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("28");
+        }
+        /// <summary>
+        /// 
+        /// Number 29
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button43_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("29");
+        }
+        /// <summary>
+        /// Number 30
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button50_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("30");
+        }
+        /// <summary>
+        ///  nUmber 31
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button51_Click(object sender, EventArgs e)
+        {
+            DateOfMonth("31");
+        }
+        /// <summary>
+        ///  WEATHER  SECTION 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
+        //// SUNNY WEATHER 
+        private void button54_Click(object sender, EventArgs e)
+        {
+            CurrentWeather("Sunny");
+        }
+        /// <summary>
+        ///  WEATHER - RANINY
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button55_Click(object sender, EventArgs e)
+        {
+            CurrentWeather("Rainy");
+        }
+        /// <summary>
+        ///  SNOWY WEATHER 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button56_Click(object sender, EventArgs e)
+        {
+            CurrentWeather("Snowy");
+        }
+        /// <summary>
+        /// WEATHER - CLOUDY
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button57_Click(object sender, EventArgs e)
+        {
+            CurrentWeather("cloudy");
+        }
+        /// <summary>
+        /// WEATHER - FOGGY
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button58_Click(object sender, EventArgs e)
+        {
+            CurrentWeather("Foggy");
+        }
+        
+        /// <summary>
+        ///  WEATHER - BREEZY 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button59_Click(object sender, EventArgs e)
+        {
+            CurrentWeather("Breezy");
+        }
+        /// <summary>
+        /// TEMPATURE  BUTTONS 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button61_Click(object sender, EventArgs e)
+        {
+            CurrentTemp("Cold");
+        }
+
+        /// <summary>
+        ///   Temperature  Cool
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button62_Click(object sender, EventArgs e)
+        {
+            CurrentTemp("Cool");
+        }
+        /// <summary>
+        /// Temperature  Hot 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button63_Click(object sender, EventArgs e)
+        {
+            CurrentTemp("Hot");
+        }
+        /// <summary>
+        ///   Temperature - Warm 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button64_Click(object sender, EventArgs e)
+        {
+            CurrentTemp("Warm");
+        }
+        private void button52_Click(object sender, EventArgs e)
+        {
+            flatTabControl2.SelectedIndex = (flatTabControl2.SelectedIndex + 1 < flatTabControl2.TabCount) ?
+                           flatTabControl2.SelectedIndex + 1 : flatTabControl2.SelectedIndex;
+        }
+
+        private void button60_Click(object sender, EventArgs e)
+        {
+            flatTabControl2.SelectedIndex = (flatTabControl2.SelectedIndex + 1 < flatTabControl2.TabCount) ?
+                           flatTabControl2.SelectedIndex + 1 : flatTabControl2.SelectedIndex;
+        }
+
+        private void button65_Click(object sender, EventArgs e)
+        {
+            Display_Date.Visible = true;
+            flatTabControl2.SelectedIndex = (flatTabControl2.SelectedIndex + 1 < flatTabControl2.TabCount) ?
+                           flatTabControl2.SelectedIndex + 1 : flatTabControl2.SelectedIndex;
+            //Display_Date.Text = Q_Day;
+           // Display_Month.Text = Q_Month;
+           // Display_Date.Text = Q_Date;
+            DateTime myDateTime = DateTime.Now;
+            string year = myDateTime.Year.ToString();
+            // Display_Year.Text = year;
+            Display_Date.Text = Q_Day + ", " + Q_Month + " " + Q_Date + ", " + year;
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                //tabPage3
+                flatTabControl1.TabPages.Remove(tabPage3);
+            }
+           if (!checkBox1.Checked)
+            {
+                //flatTabControl1.TabPages.Add(3,TabPage3);
+                flatTabControl1.TabPages.Add(tabPage3);
+            }
+
         }
     }
     }
