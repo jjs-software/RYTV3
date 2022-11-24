@@ -13,19 +13,24 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\WINGS\Desktop\RYTV3\V3\</PublishUrl>
+    <PublishUrl>C:\Users\WINGS\Desktop\RYTV3\V6\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
+    <UpdateMode>Background</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>RYTV 3</ProductName>
+    <PublisherName>Jeremy Stevens</PublisherName>
+    <SuiteName>Classroom Tools</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -38,6 +43,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -143,6 +150,59 @@
     <None Include="Resources\Oct.PNG" />
     <None Include="Resources\Nov.PNG" />
     <None Include="Resources\Dev.PNG" />
+    <None Include="Resources\1.PNG" />
+    <None Include="Resources\2.PNG" />
+    <None Include="Resources\21.PNG" />
+    <None Include="Resources\11.PNG" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\22.PNG" />
+    <None Include="Resources\23.PNG" />
+    <None Include="Resources\12.PNG" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\10.png" />
+    <None Include="Resources\111.png" />
+    <None Include="Resources\121.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\141.png" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\17.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\19.png" />
+    <None Include="Resources\20.png" />
+    <None Include="Resources\211.png" />
+    <None Include="Resources\221.png" />
+    <None Include="Resources\231.png" />
+    <None Include="Resources\24.png" />
+    <None Include="Resources\25.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\27.png" />
+    <None Include="Resources\28.png" />
+    <None Include="Resources\29.png" />
+    <None Include="Resources\30.png" />
+    <None Include="Resources\311.png" />
+    <None Include="Resources\Sunny.PNG" />
+    <None Include="Resources\Rainy.PNG" />
+    <None Include="Resources\Snowy.PNG" />
+    <None Include="Resources\cloudy.PNG" />
+    <None Include="Resources\foggy.PNG" />
+    <None Include="Resources\breezy.PNG" />
+    <None Include="Resources\breezy1.PNG" />
+    <None Include="Resources\breezy2.PNG" />
+    <None Include="Resources\breezy3.png" />
+    <None Include="Resources\breezy4.png" />
+    <None Include="Resources\breezy5.png" />
+    <None Include="Resources\Cold.PNG" />
+    <None Include="Resources\Cool.PNG" />
+    <None Include="Resources\hot.PNG" />
+    <None Include="Resources\Warm.PNG" />
     <Content Include="youtube-logo-png-46020-Windows.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -29,9 +29,12 @@ namespace RYTV3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.formSkin1 = new FlatUI.FormSkin();
             this.flatTabControl1 = new FlatUI.FlatTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lic_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.flatLabel2 = new FlatUI.FlatLabel();
             this.getVids_btn = new FlatUI.FlatButton();
             this.gb6 = new FlatUI.FlatGroupBox();
@@ -46,6 +49,17 @@ namespace RYTV3
             this.pb2 = new System.Windows.Forms.PictureBox();
             this.gb1 = new FlatUI.FlatGroupBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.build_label = new System.Windows.Forms.Label();
+            this.flatLabel3 = new FlatUI.FlatLabel();
+            this.flatAlertBox1 = new FlatUI.FlatAlertBox();
+            this.flatGroupBox2 = new FlatUI.FlatGroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.flatGroupBox1 = new FlatUI.FlatGroupBox();
+            this.status_lbl = new FlatUI.FlatLabel();
+            this.flatLabel1 = new FlatUI.FlatLabel();
+            this.loadList_btn = new FlatUI.FlatButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.flatTabControl2 = new FlatUI.FlatTabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -73,20 +87,62 @@ namespace RYTV3
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.build_label = new System.Windows.Forms.Label();
-            this.flatLabel3 = new FlatUI.FlatLabel();
-            this.flatAlertBox1 = new FlatUI.FlatAlertBox();
-            this.flatGroupBox2 = new FlatUI.FlatGroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.flatGroupBox1 = new FlatUI.FlatGroupBox();
-            this.status_lbl = new FlatUI.FlatLabel();
-            this.flatLabel1 = new FlatUI.FlatLabel();
-            this.loadList_btn = new FlatUI.FlatButton();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button53 = new System.Windows.Forms.Button();
+            this.button52 = new System.Windows.Forms.Button();
+            this.button51 = new System.Windows.Forms.Button();
+            this.button50 = new System.Windows.Forms.Button();
+            this.button43 = new System.Windows.Forms.Button();
+            this.button44 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
+            this.button46 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button49 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.flatLabel6 = new FlatUI.FlatLabel();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button60 = new System.Windows.Forms.Button();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button58 = new System.Windows.Forms.Button();
+            this.button57 = new System.Windows.Forms.Button();
+            this.button56 = new System.Windows.Forms.Button();
+            this.button55 = new System.Windows.Forms.Button();
+            this.button54 = new System.Windows.Forms.Button();
+            this.flatLabel7 = new FlatUI.FlatLabel();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.button65 = new System.Windows.Forms.Button();
+            this.button64 = new System.Windows.Forms.Button();
+            this.button63 = new System.Windows.Forms.Button();
+            this.button62 = new System.Windows.Forms.Button();
+            this.button61 = new System.Windows.Forms.Button();
+            this.flatLabel8 = new FlatUI.FlatLabel();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.flatLabel10 = new FlatUI.FlatLabel();
+            this.Display_Date = new FlatUI.FlatLabel();
             this.flatMax1 = new FlatUI.FlatMax();
             this.flatMini1 = new FlatUI.FlatMini();
             this.flatClose1 = new FlatUI.FlatClose();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.formSkin1.SuspendLayout();
             this.flatTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,14 +158,18 @@ namespace RYTV3
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             this.gb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.flatTabControl2.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.flatGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.flatGroupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.flatTabControl2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
             this.SuspendLayout();
             // 
             // formSkin1
@@ -137,8 +197,8 @@ namespace RYTV3
             this.flatTabControl1.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.flatTabControl1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.flatTabControl1.Controls.Add(this.tabPage1);
-            this.flatTabControl1.Controls.Add(this.tabPage3);
             this.flatTabControl1.Controls.Add(this.tabPage2);
+            this.flatTabControl1.Controls.Add(this.tabPage3);
             this.flatTabControl1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.flatTabControl1.ItemSize = new System.Drawing.Size(120, 40);
             this.flatTabControl1.Location = new System.Drawing.Point(4, 50);
@@ -151,6 +211,8 @@ namespace RYTV3
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.lic_lbl);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.flatLabel2);
             this.tabPage1.Controls.Add(this.getVids_btn);
             this.tabPage1.Controls.Add(this.gb6);
@@ -165,6 +227,24 @@ namespace RYTV3
             this.tabPage1.Size = new System.Drawing.Size(1338, 631);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Youtube";
+            // 
+            // lic_lbl
+            // 
+            this.lic_lbl.AutoSize = true;
+            this.lic_lbl.Location = new System.Drawing.Point(56, 609);
+            this.lic_lbl.Name = "lic_lbl";
+            this.lic_lbl.Size = new System.Drawing.Size(24, 19);
+            this.lic_lbl.TabIndex = 9;
+            this.lic_lbl.Text = "ok";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 609);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 19);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Status:";
             // 
             // flatLabel2
             // 
@@ -349,6 +429,162 @@ namespace RYTV3
             this.pb1.TabStop = false;
             this.pb1.Click += new System.EventHandler(this.pb1_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.build_label);
+            this.tabPage2.Controls.Add(this.flatLabel3);
+            this.tabPage2.Controls.Add(this.flatAlertBox1);
+            this.tabPage2.Controls.Add(this.flatGroupBox2);
+            this.tabPage2.Controls.Add(this.flatGroupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 44);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1338, 631);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Settings";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkBox1.Location = new System.Drawing.Point(36, 285);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(191, 23);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Enable / Disable Questions";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // build_label
+            // 
+            this.build_label.AutoSize = true;
+            this.build_label.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.build_label.Location = new System.Drawing.Point(600, 588);
+            this.build_label.Name = "build_label";
+            this.build_label.Size = new System.Drawing.Size(45, 19);
+            this.build_label.TabIndex = 9;
+            this.build_label.Text = "label1";
+            // 
+            // flatLabel3
+            // 
+            this.flatLabel3.AutoSize = true;
+            this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatLabel3.ForeColor = System.Drawing.Color.White;
+            this.flatLabel3.Location = new System.Drawing.Point(533, 613);
+            this.flatLabel3.Name = "flatLabel3";
+            this.flatLabel3.Size = new System.Drawing.Size(216, 13);
+            this.flatLabel3.TabIndex = 8;
+            this.flatLabel3.Text = "© 2022 Jeremy Stevens / JJS Software LLC";
+            // 
+            // flatAlertBox1
+            // 
+            this.flatAlertBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.flatAlertBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatAlertBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.flatAlertBox1.kind = FlatUI.FlatAlertBox._Kind.Info;
+            this.flatAlertBox1.Location = new System.Drawing.Point(36, 285);
+            this.flatAlertBox1.Name = "flatAlertBox1";
+            this.flatAlertBox1.Size = new System.Drawing.Size(187, 42);
+            this.flatAlertBox1.TabIndex = 2;
+            this.flatAlertBox1.Text = "OK";
+            this.flatAlertBox1.Visible = false;
+            // 
+            // flatGroupBox2
+            // 
+            this.flatGroupBox2.BackColor = System.Drawing.Color.White;
+            this.flatGroupBox2.BaseColor = System.Drawing.Color.Empty;
+            this.flatGroupBox2.Controls.Add(this.numericUpDown1);
+            this.flatGroupBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.flatGroupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.flatGroupBox2.Location = new System.Drawing.Point(36, 165);
+            this.flatGroupBox2.Name = "flatGroupBox2";
+            this.flatGroupBox2.ShowText = true;
+            this.flatGroupBox2.Size = new System.Drawing.Size(187, 103);
+            this.flatGroupBox2.TabIndex = 1;
+            this.flatGroupBox2.Text = "Step 2: Number of Choices";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(23, 49);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(135, 29);
+            this.numericUpDown1.TabIndex = 0;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // flatGroupBox1
+            // 
+            this.flatGroupBox1.BackColor = System.Drawing.Color.White;
+            this.flatGroupBox1.BaseColor = System.Drawing.Color.Empty;
+            this.flatGroupBox1.Controls.Add(this.status_lbl);
+            this.flatGroupBox1.Controls.Add(this.flatLabel1);
+            this.flatGroupBox1.Controls.Add(this.loadList_btn);
+            this.flatGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.flatGroupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.flatGroupBox1.Location = new System.Drawing.Point(36, 35);
+            this.flatGroupBox1.Name = "flatGroupBox1";
+            this.flatGroupBox1.ShowText = true;
+            this.flatGroupBox1.Size = new System.Drawing.Size(187, 103);
+            this.flatGroupBox1.TabIndex = 0;
+            this.flatGroupBox1.Text = "Step 1: Load youtube list";
+            // 
+            // status_lbl
+            // 
+            this.status_lbl.AutoSize = true;
+            this.status_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.status_lbl.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.status_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.status_lbl.Location = new System.Drawing.Point(66, 87);
+            this.status_lbl.Name = "status_lbl";
+            this.status_lbl.Size = new System.Drawing.Size(92, 13);
+            this.status_lbl.TabIndex = 3;
+            this.status_lbl.Text = "0 Videos Loaded";
+            // 
+            // flatLabel1
+            // 
+            this.flatLabel1.AutoSize = true;
+            this.flatLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatLabel1.Location = new System.Drawing.Point(23, 87);
+            this.flatLabel1.Name = "flatLabel1";
+            this.flatLabel1.Size = new System.Drawing.Size(42, 13);
+            this.flatLabel1.TabIndex = 2;
+            this.flatLabel1.Text = "Status:";
+            // 
+            // loadList_btn
+            // 
+            this.loadList_btn.BackColor = System.Drawing.Color.Transparent;
+            this.loadList_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.loadList_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loadList_btn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.loadList_btn.Location = new System.Drawing.Point(23, 44);
+            this.loadList_btn.Name = "loadList_btn";
+            this.loadList_btn.Rounded = false;
+            this.loadList_btn.Size = new System.Drawing.Size(143, 32);
+            this.loadList_btn.TabIndex = 1;
+            this.loadList_btn.Text = "Load youtube list";
+            this.loadList_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.loadList_btn.Click += new System.EventHandler(this.loadList_btn_Click);
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
@@ -366,6 +602,9 @@ namespace RYTV3
             this.flatTabControl2.Controls.Add(this.tabPage4);
             this.flatTabControl2.Controls.Add(this.tabPage5);
             this.flatTabControl2.Controls.Add(this.tabPage6);
+            this.flatTabControl2.Controls.Add(this.tabPage7);
+            this.flatTabControl2.Controls.Add(this.tabPage8);
+            this.flatTabControl2.Controls.Add(this.tabPage9);
             this.flatTabControl2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.flatTabControl2.ItemSize = new System.Drawing.Size(120, 40);
             this.flatTabControl2.Location = new System.Drawing.Point(-4, 0);
@@ -686,148 +925,657 @@ namespace RYTV3
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // tabPage2
+            // tabPage6
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage2.Controls.Add(this.build_label);
-            this.tabPage2.Controls.Add(this.flatLabel3);
-            this.tabPage2.Controls.Add(this.flatAlertBox1);
-            this.tabPage2.Controls.Add(this.flatGroupBox2);
-            this.tabPage2.Controls.Add(this.flatGroupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 44);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1338, 631);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Settings";
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage6.Controls.Add(this.button53);
+            this.tabPage6.Controls.Add(this.button52);
+            this.tabPage6.Controls.Add(this.button51);
+            this.tabPage6.Controls.Add(this.button50);
+            this.tabPage6.Controls.Add(this.button43);
+            this.tabPage6.Controls.Add(this.button44);
+            this.tabPage6.Controls.Add(this.button45);
+            this.tabPage6.Controls.Add(this.button46);
+            this.tabPage6.Controls.Add(this.button47);
+            this.tabPage6.Controls.Add(this.button48);
+            this.tabPage6.Controls.Add(this.button49);
+            this.tabPage6.Controls.Add(this.button36);
+            this.tabPage6.Controls.Add(this.button37);
+            this.tabPage6.Controls.Add(this.button38);
+            this.tabPage6.Controls.Add(this.button39);
+            this.tabPage6.Controls.Add(this.button40);
+            this.tabPage6.Controls.Add(this.button41);
+            this.tabPage6.Controls.Add(this.button42);
+            this.tabPage6.Controls.Add(this.button29);
+            this.tabPage6.Controls.Add(this.button30);
+            this.tabPage6.Controls.Add(this.button31);
+            this.tabPage6.Controls.Add(this.button32);
+            this.tabPage6.Controls.Add(this.button33);
+            this.tabPage6.Controls.Add(this.button34);
+            this.tabPage6.Controls.Add(this.button35);
+            this.tabPage6.Controls.Add(this.button28);
+            this.tabPage6.Controls.Add(this.button27);
+            this.tabPage6.Controls.Add(this.button26);
+            this.tabPage6.Controls.Add(this.button25);
+            this.tabPage6.Controls.Add(this.button24);
+            this.tabPage6.Controls.Add(this.button23);
+            this.tabPage6.Controls.Add(this.button22);
+            this.tabPage6.Controls.Add(this.flatLabel6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 44);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1338, 587);
+            this.tabPage6.TabIndex = 2;
+            this.tabPage6.Text = "3";
             // 
-            // build_label
+            // button53
             // 
-            this.build_label.AutoSize = true;
-            this.build_label.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.build_label.Location = new System.Drawing.Point(600, 588);
-            this.build_label.Name = "build_label";
-            this.build_label.Size = new System.Drawing.Size(45, 19);
-            this.build_label.TabIndex = 9;
-            this.build_label.Text = "label1";
+            this.button53.Image = global::RYTV3.Properties.Resources._11;
+            this.button53.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button53.Location = new System.Drawing.Point(551, 200);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(100, 80);
+            this.button53.TabIndex = 50;
+            this.button53.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button53.UseVisualStyleBackColor = true;
+            this.button53.Click += new System.EventHandler(this.button53_Click);
             // 
-            // flatLabel3
+            // button52
             // 
-            this.flatLabel3.AutoSize = true;
-            this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatLabel3.ForeColor = System.Drawing.Color.White;
-            this.flatLabel3.Location = new System.Drawing.Point(533, 613);
-            this.flatLabel3.Name = "flatLabel3";
-            this.flatLabel3.Size = new System.Drawing.Size(216, 13);
-            this.flatLabel3.TabIndex = 8;
-            this.flatLabel3.Text = "© 2022 Jeremy Stevens / JJS Software LLC";
+            this.button52.Image = global::RYTV3.Properties.Resources.Arrow_right_svg;
+            this.button52.Location = new System.Drawing.Point(1111, 510);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(219, 71);
+            this.button52.TabIndex = 49;
+            this.button52.Text = "  ";
+            this.button52.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
-            // flatAlertBox1
+            // button51
             // 
-            this.flatAlertBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.flatAlertBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flatAlertBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.flatAlertBox1.kind = FlatUI.FlatAlertBox._Kind.Info;
-            this.flatAlertBox1.Location = new System.Drawing.Point(36, 285);
-            this.flatAlertBox1.Name = "flatAlertBox1";
-            this.flatAlertBox1.Size = new System.Drawing.Size(187, 42);
-            this.flatAlertBox1.TabIndex = 2;
-            this.flatAlertBox1.Text = "OK";
-            this.flatAlertBox1.Visible = false;
+            this.button51.Image = global::RYTV3.Properties.Resources._311;
+            this.button51.Location = new System.Drawing.Point(688, 501);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(104, 80);
+            this.button51.TabIndex = 48;
+            this.button51.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button51.UseVisualStyleBackColor = true;
+            this.button51.Click += new System.EventHandler(this.button51_Click);
             // 
-            // flatGroupBox2
+            // button50
             // 
-            this.flatGroupBox2.BackColor = System.Drawing.Color.White;
-            this.flatGroupBox2.BaseColor = System.Drawing.Color.Empty;
-            this.flatGroupBox2.Controls.Add(this.numericUpDown1);
-            this.flatGroupBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.flatGroupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.flatGroupBox2.Location = new System.Drawing.Point(36, 165);
-            this.flatGroupBox2.Name = "flatGroupBox2";
-            this.flatGroupBox2.ShowText = true;
-            this.flatGroupBox2.Size = new System.Drawing.Size(187, 103);
-            this.flatGroupBox2.TabIndex = 1;
-            this.flatGroupBox2.Text = "Step 2: Number of Choices";
+            this.button50.Image = global::RYTV3.Properties.Resources._30;
+            this.button50.Location = new System.Drawing.Point(557, 499);
+            this.button50.Name = "button50";
+            this.button50.Size = new System.Drawing.Size(114, 80);
+            this.button50.TabIndex = 47;
+            this.button50.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button50.UseVisualStyleBackColor = true;
+            this.button50.Click += new System.EventHandler(this.button50_Click);
             // 
-            // numericUpDown1
+            // button43
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(23, 49);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(135, 29);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.button43.Image = global::RYTV3.Properties.Resources._29;
+            this.button43.Location = new System.Drawing.Point(429, 499);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(112, 80);
+            this.button43.TabIndex = 46;
+            this.button43.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.button43_Click);
             // 
-            // flatGroupBox1
+            // button44
             // 
-            this.flatGroupBox1.BackColor = System.Drawing.Color.White;
-            this.flatGroupBox1.BaseColor = System.Drawing.Color.Empty;
-            this.flatGroupBox1.Controls.Add(this.status_lbl);
-            this.flatGroupBox1.Controls.Add(this.flatLabel1);
-            this.flatGroupBox1.Controls.Add(this.loadList_btn);
-            this.flatGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.flatGroupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.flatGroupBox1.Location = new System.Drawing.Point(36, 35);
-            this.flatGroupBox1.Name = "flatGroupBox1";
-            this.flatGroupBox1.ShowText = true;
-            this.flatGroupBox1.Size = new System.Drawing.Size(187, 103);
-            this.flatGroupBox1.TabIndex = 0;
-            this.flatGroupBox1.Text = "Step 1: Load youtube list";
+            this.button44.Image = global::RYTV3.Properties.Resources._28;
+            this.button44.Location = new System.Drawing.Point(947, 407);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(112, 80);
+            this.button44.TabIndex = 45;
+            this.button44.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.button44_Click);
             // 
-            // status_lbl
+            // button45
             // 
-            this.status_lbl.AutoSize = true;
-            this.status_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.status_lbl.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.status_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.status_lbl.Location = new System.Drawing.Point(66, 87);
-            this.status_lbl.Name = "status_lbl";
-            this.status_lbl.Size = new System.Drawing.Size(92, 13);
-            this.status_lbl.TabIndex = 3;
-            this.status_lbl.Text = "0 Videos Loaded";
+            this.button45.Image = global::RYTV3.Properties.Resources._27;
+            this.button45.Location = new System.Drawing.Point(814, 407);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(110, 80);
+            this.button45.TabIndex = 44;
+            this.button45.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button45.UseVisualStyleBackColor = true;
+            this.button45.Click += new System.EventHandler(this.button45_Click);
             // 
-            // flatLabel1
+            // button46
             // 
-            this.flatLabel1.AutoSize = true;
-            this.flatLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatLabel1.Location = new System.Drawing.Point(23, 87);
-            this.flatLabel1.Name = "flatLabel1";
-            this.flatLabel1.Size = new System.Drawing.Size(42, 13);
-            this.flatLabel1.TabIndex = 2;
-            this.flatLabel1.Text = "Status:";
+            this.button46.Image = global::RYTV3.Properties.Resources._26;
+            this.button46.Location = new System.Drawing.Point(688, 407);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(104, 80);
+            this.button46.TabIndex = 43;
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
             // 
-            // loadList_btn
+            // button47
             // 
-            this.loadList_btn.BackColor = System.Drawing.Color.Transparent;
-            this.loadList_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.loadList_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loadList_btn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.loadList_btn.Location = new System.Drawing.Point(23, 44);
-            this.loadList_btn.Name = "loadList_btn";
-            this.loadList_btn.Rounded = false;
-            this.loadList_btn.Size = new System.Drawing.Size(143, 32);
-            this.loadList_btn.TabIndex = 1;
-            this.loadList_btn.Text = "Load youtube list";
-            this.loadList_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.loadList_btn.Click += new System.EventHandler(this.loadList_btn_Click);
+            this.button47.Image = global::RYTV3.Properties.Resources._25;
+            this.button47.Location = new System.Drawing.Point(557, 407);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(114, 80);
+            this.button47.TabIndex = 42;
+            this.button47.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.button47_Click);
+            // 
+            // button48
+            // 
+            this.button48.Image = global::RYTV3.Properties.Resources._24;
+            this.button48.Location = new System.Drawing.Point(429, 407);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(112, 80);
+            this.button48.TabIndex = 41;
+            this.button48.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button48.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button48.UseVisualStyleBackColor = true;
+            this.button48.Click += new System.EventHandler(this.button48_Click);
+            // 
+            // button49
+            // 
+            this.button49.Image = global::RYTV3.Properties.Resources._231;
+            this.button49.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button49.Location = new System.Drawing.Point(307, 407);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(107, 80);
+            this.button49.TabIndex = 40;
+            this.button49.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button49.UseVisualStyleBackColor = true;
+            this.button49.Click += new System.EventHandler(this.button49_Click);
+            // 
+            // button36
+            // 
+            this.button36.Image = ((System.Drawing.Image)(resources.GetObject("button36.Image")));
+            this.button36.Location = new System.Drawing.Point(170, 407);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(112, 80);
+            this.button36.TabIndex = 39;
+            this.button36.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // button37
+            // 
+            this.button37.Image = ((System.Drawing.Image)(resources.GetObject("button37.Image")));
+            this.button37.Location = new System.Drawing.Point(947, 304);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(112, 80);
+            this.button37.TabIndex = 38;
+            this.button37.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
+            // 
+            // button38
+            // 
+            this.button38.Image = global::RYTV3.Properties.Resources._20;
+            this.button38.Location = new System.Drawing.Point(814, 304);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(110, 80);
+            this.button38.TabIndex = 37;
+            this.button38.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
+            // 
+            // button39
+            // 
+            this.button39.Image = global::RYTV3.Properties.Resources._19;
+            this.button39.Location = new System.Drawing.Point(688, 304);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(97, 80);
+            this.button39.TabIndex = 36;
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
+            // 
+            // button40
+            // 
+            this.button40.Image = global::RYTV3.Properties.Resources._18;
+            this.button40.Location = new System.Drawing.Point(557, 304);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(114, 80);
+            this.button40.TabIndex = 35;
+            this.button40.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
+            // button41
+            // 
+            this.button41.Image = global::RYTV3.Properties.Resources._17;
+            this.button41.Location = new System.Drawing.Point(435, 304);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(106, 80);
+            this.button41.TabIndex = 34;
+            this.button41.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button41.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // button42
+            // 
+            this.button42.Image = global::RYTV3.Properties.Resources._16;
+            this.button42.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button42.Location = new System.Drawing.Point(307, 304);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(107, 80);
+            this.button42.TabIndex = 33;
+            this.button42.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
+            // 
+            // button29
+            // 
+            this.button29.Image = global::RYTV3.Properties.Resources._15;
+            this.button29.Location = new System.Drawing.Point(170, 304);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(114, 80);
+            this.button29.TabIndex = 32;
+            this.button29.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // button30
+            // 
+            this.button30.Image = global::RYTV3.Properties.Resources._141;
+            this.button30.Location = new System.Drawing.Point(947, 200);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(112, 80);
+            this.button30.TabIndex = 31;
+            this.button30.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button31
+            // 
+            this.button31.Image = global::RYTV3.Properties.Resources._13;
+            this.button31.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button31.Location = new System.Drawing.Point(814, 200);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(110, 80);
+            this.button31.TabIndex = 30;
+            this.button31.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
+            // 
+            // button32
+            // 
+            this.button32.Image = global::RYTV3.Properties.Resources._12;
+            this.button32.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button32.Location = new System.Drawing.Point(680, 200);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(107, 80);
+            this.button32.TabIndex = 29;
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
+            // 
+            // button33
+            // 
+            this.button33.Image = global::RYTV3.Properties.Resources._10;
+            this.button33.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button33.Location = new System.Drawing.Point(431, 200);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(91, 80);
+            this.button33.TabIndex = 28;
+            this.button33.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // button34
+            // 
+            this.button34.Image = global::RYTV3.Properties.Resources._9;
+            this.button34.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button34.Location = new System.Drawing.Point(307, 200);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(97, 80);
+            this.button34.TabIndex = 27;
+            this.button34.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button34.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // button35
+            // 
+            this.button35.Image = ((System.Drawing.Image)(resources.GetObject("button35.Image")));
+            this.button35.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button35.Location = new System.Drawing.Point(170, 200);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(107, 80);
+            this.button35.TabIndex = 26;
+            this.button35.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
+            // 
+            // button28
+            // 
+            this.button28.Image = global::RYTV3.Properties.Resources._7;
+            this.button28.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button28.Location = new System.Drawing.Point(947, 87);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(112, 80);
+            this.button28.TabIndex = 25;
+            this.button28.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button27
+            // 
+            this.button27.Image = global::RYTV3.Properties.Resources._6;
+            this.button27.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button27.Location = new System.Drawing.Point(810, 87);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(112, 80);
+            this.button27.TabIndex = 24;
+            this.button27.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // button26
+            // 
+            this.button26.Image = global::RYTV3.Properties.Resources._5;
+            this.button26.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button26.Location = new System.Drawing.Point(680, 87);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(107, 80);
+            this.button26.TabIndex = 23;
+            this.button26.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
+            // button25
+            // 
+            this.button25.Image = global::RYTV3.Properties.Resources._4;
+            this.button25.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button25.Location = new System.Drawing.Point(551, 87);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(100, 80);
+            this.button25.TabIndex = 22;
+            this.button25.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // button24
+            // 
+            this.button24.Image = global::RYTV3.Properties.Resources._32;
+            this.button24.Location = new System.Drawing.Point(431, 87);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(91, 80);
+            this.button24.TabIndex = 21;
+            this.button24.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // button23
+            // 
+            this.button23.Image = global::RYTV3.Properties.Resources._23;
+            this.button23.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button23.Location = new System.Drawing.Point(307, 87);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(97, 80);
+            this.button23.TabIndex = 20;
+            this.button23.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button22
+            // 
+            this.button22.Image = ((System.Drawing.Image)(resources.GetObject("button22.Image")));
+            this.button22.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button22.Location = new System.Drawing.Point(170, 87);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(107, 80);
+            this.button22.TabIndex = 19;
+            this.button22.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // flatLabel6
+            // 
+            this.flatLabel6.AutoSize = true;
+            this.flatLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel6.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel6.ForeColor = System.Drawing.Color.White;
+            this.flatLabel6.Location = new System.Drawing.Point(434, -2);
+            this.flatLabel6.Name = "flatLabel6";
+            this.flatLabel6.Size = new System.Drawing.Size(411, 86);
+            this.flatLabel6.TabIndex = 18;
+            this.flatLabel6.Text = "The date is ?";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage7.Controls.Add(this.button60);
+            this.tabPage7.Controls.Add(this.button59);
+            this.tabPage7.Controls.Add(this.button58);
+            this.tabPage7.Controls.Add(this.button57);
+            this.tabPage7.Controls.Add(this.button56);
+            this.tabPage7.Controls.Add(this.button55);
+            this.tabPage7.Controls.Add(this.button54);
+            this.tabPage7.Controls.Add(this.flatLabel7);
+            this.tabPage7.Location = new System.Drawing.Point(4, 44);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1338, 587);
+            this.tabPage7.TabIndex = 3;
+            this.tabPage7.Text = "4";
+            // 
+            // button60
+            // 
+            this.button60.Image = global::RYTV3.Properties.Resources.Arrow_right_svg;
+            this.button60.Location = new System.Drawing.Point(1111, 508);
+            this.button60.Name = "button60";
+            this.button60.Size = new System.Drawing.Size(219, 71);
+            this.button60.TabIndex = 50;
+            this.button60.Text = "  ";
+            this.button60.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button60.UseVisualStyleBackColor = true;
+            this.button60.Click += new System.EventHandler(this.button60_Click);
+            // 
+            // button59
+            // 
+            this.button59.Image = global::RYTV3.Properties.Resources.breezy5;
+            this.button59.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button59.Location = new System.Drawing.Point(803, 295);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(134, 158);
+            this.button59.TabIndex = 25;
+            this.button59.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button59.UseVisualStyleBackColor = true;
+            this.button59.Click += new System.EventHandler(this.button59_Click);
+            // 
+            // button58
+            // 
+            this.button58.Image = global::RYTV3.Properties.Resources.foggy;
+            this.button58.Location = new System.Drawing.Point(629, 295);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(134, 158);
+            this.button58.TabIndex = 24;
+            this.button58.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button58.UseVisualStyleBackColor = true;
+            this.button58.Click += new System.EventHandler(this.button58_Click);
+            // 
+            // button57
+            // 
+            this.button57.Image = global::RYTV3.Properties.Resources.cloudy;
+            this.button57.Location = new System.Drawing.Point(469, 295);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(134, 158);
+            this.button57.TabIndex = 23;
+            this.button57.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button57.UseVisualStyleBackColor = true;
+            this.button57.Click += new System.EventHandler(this.button57_Click);
+            // 
+            // button56
+            // 
+            this.button56.Image = global::RYTV3.Properties.Resources.Snowy;
+            this.button56.Location = new System.Drawing.Point(803, 113);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(134, 158);
+            this.button56.TabIndex = 22;
+            this.button56.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button56.UseVisualStyleBackColor = true;
+            this.button56.Click += new System.EventHandler(this.button56_Click);
+            // 
+            // button55
+            // 
+            this.button55.Image = global::RYTV3.Properties.Resources.Rainy;
+            this.button55.Location = new System.Drawing.Point(629, 113);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(134, 158);
+            this.button55.TabIndex = 21;
+            this.button55.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button55.UseVisualStyleBackColor = true;
+            this.button55.Click += new System.EventHandler(this.button55_Click);
+            // 
+            // button54
+            // 
+            this.button54.Image = global::RYTV3.Properties.Resources.Sunny;
+            this.button54.Location = new System.Drawing.Point(469, 113);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(134, 158);
+            this.button54.TabIndex = 20;
+            this.button54.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button54.UseVisualStyleBackColor = true;
+            this.button54.Click += new System.EventHandler(this.button54_Click);
+            // 
+            // flatLabel7
+            // 
+            this.flatLabel7.AutoSize = true;
+            this.flatLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel7.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel7.ForeColor = System.Drawing.Color.White;
+            this.flatLabel7.Location = new System.Drawing.Point(454, 24);
+            this.flatLabel7.Name = "flatLabel7";
+            this.flatLabel7.Size = new System.Drawing.Size(532, 86);
+            this.flatLabel7.TabIndex = 19;
+            this.flatLabel7.Text = "The Weather is ?";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage8.Controls.Add(this.button65);
+            this.tabPage8.Controls.Add(this.button64);
+            this.tabPage8.Controls.Add(this.button63);
+            this.tabPage8.Controls.Add(this.button62);
+            this.tabPage8.Controls.Add(this.button61);
+            this.tabPage8.Controls.Add(this.flatLabel8);
+            this.tabPage8.Location = new System.Drawing.Point(4, 44);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1338, 587);
+            this.tabPage8.TabIndex = 4;
+            this.tabPage8.Text = "5";
+            // 
+            // button65
+            // 
+            this.button65.Image = global::RYTV3.Properties.Resources.Arrow_right_svg;
+            this.button65.Location = new System.Drawing.Point(1105, 507);
+            this.button65.Name = "button65";
+            this.button65.Size = new System.Drawing.Size(230, 77);
+            this.button65.TabIndex = 51;
+            this.button65.Text = "  ";
+            this.button65.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button65.UseVisualStyleBackColor = true;
+            this.button65.Click += new System.EventHandler(this.button65_Click);
+            // 
+            // button64
+            // 
+            this.button64.Image = global::RYTV3.Properties.Resources.Warm;
+            this.button64.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button64.Location = new System.Drawing.Point(912, 126);
+            this.button64.Name = "button64";
+            this.button64.Size = new System.Drawing.Size(189, 213);
+            this.button64.TabIndex = 24;
+            this.button64.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button64.UseVisualStyleBackColor = true;
+            this.button64.Click += new System.EventHandler(this.button64_Click);
+            // 
+            // button63
+            // 
+            this.button63.Image = global::RYTV3.Properties.Resources.hot;
+            this.button63.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button63.Location = new System.Drawing.Point(680, 126);
+            this.button63.Name = "button63";
+            this.button63.Size = new System.Drawing.Size(189, 213);
+            this.button63.TabIndex = 23;
+            this.button63.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button63.UseVisualStyleBackColor = true;
+            this.button63.Click += new System.EventHandler(this.button63_Click);
+            // 
+            // button62
+            // 
+            this.button62.Image = global::RYTV3.Properties.Resources.Cool;
+            this.button62.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button62.Location = new System.Drawing.Point(449, 126);
+            this.button62.Name = "button62";
+            this.button62.Size = new System.Drawing.Size(189, 213);
+            this.button62.TabIndex = 22;
+            this.button62.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button62.UseVisualStyleBackColor = true;
+            this.button62.Click += new System.EventHandler(this.button62_Click);
+            // 
+            // button61
+            // 
+            this.button61.Image = global::RYTV3.Properties.Resources.Cold;
+            this.button61.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button61.Location = new System.Drawing.Point(234, 126);
+            this.button61.Name = "button61";
+            this.button61.Size = new System.Drawing.Size(183, 213);
+            this.button61.TabIndex = 21;
+            this.button61.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button61.UseVisualStyleBackColor = true;
+            this.button61.Click += new System.EventHandler(this.button61_Click);
+            // 
+            // flatLabel8
+            // 
+            this.flatLabel8.AutoSize = true;
+            this.flatLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel8.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel8.ForeColor = System.Drawing.Color.White;
+            this.flatLabel8.Location = new System.Drawing.Point(309, 28);
+            this.flatLabel8.Name = "flatLabel8";
+            this.flatLabel8.Size = new System.Drawing.Size(661, 86);
+            this.flatLabel8.TabIndex = 20;
+            this.flatLabel8.Text = "The Temperature is ?";
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage9.Controls.Add(this.flatLabel10);
+            this.tabPage9.Controls.Add(this.Display_Date);
+            this.tabPage9.Location = new System.Drawing.Point(4, 44);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(1338, 587);
+            this.tabPage9.TabIndex = 5;
+            this.tabPage9.Text = "6";
+            // 
+            // flatLabel10
+            // 
+            this.flatLabel10.AutoSize = true;
+            this.flatLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel10.Font = new System.Drawing.Font("Segoe UI", 98.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel10.ForeColor = System.Drawing.Color.White;
+            this.flatLabel10.Location = new System.Drawing.Point(287, 0);
+            this.flatLabel10.Name = "flatLabel10";
+            this.flatLabel10.Size = new System.Drawing.Size(812, 174);
+            this.flatLabel10.TabIndex = 25;
+            this.flatLabel10.Text = "The Date is?";
+            // 
+            // Display_Date
+            // 
+            this.Display_Date.AutoSize = true;
+            this.Display_Date.BackColor = System.Drawing.Color.Transparent;
+            this.Display_Date.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Display_Date.ForeColor = System.Drawing.Color.White;
+            this.Display_Date.Location = new System.Drawing.Point(329, 202);
+            this.Display_Date.Name = "Display_Date";
+            this.Display_Date.Size = new System.Drawing.Size(152, 86);
+            this.Display_Date.TabIndex = 21;
+            this.Display_Date.Text = "Day";
+            this.Display_Date.Visible = false;
             // 
             // flatMax1
             // 
@@ -868,15 +1616,6 @@ namespace RYTV3
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage6.Location = new System.Drawing.Point(4, 44);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1338, 587);
-            this.tabPage6.TabIndex = 2;
-            this.tabPage6.Text = "3";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -905,18 +1644,26 @@ namespace RYTV3
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             this.gb1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.flatTabControl2.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.flatGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.flatGroupBox1.ResumeLayout(false);
             this.flatGroupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.flatTabControl2.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -981,6 +1728,61 @@ namespace RYTV3
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.TabPage tabPage6;
+        private FlatUI.FlatLabel flatLabel6;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.Button button43;
+        private System.Windows.Forms.Button button44;
+        private System.Windows.Forms.Button button45;
+        private System.Windows.Forms.Button button46;
+        private System.Windows.Forms.Button button47;
+        private System.Windows.Forms.Button button48;
+        private System.Windows.Forms.Button button49;
+        private System.Windows.Forms.Button button50;
+        private System.Windows.Forms.Button button51;
+        private System.Windows.Forms.Button button52;
+        private System.Windows.Forms.Button button53;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button button54;
+        private FlatUI.FlatLabel flatLabel7;
+        private System.Windows.Forms.Button button55;
+        private System.Windows.Forms.Button button56;
+        private System.Windows.Forms.Button button57;
+        private System.Windows.Forms.Button button58;
+        private System.Windows.Forms.Button button59;
+        private System.Windows.Forms.Button button60;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Button button61;
+        private FlatUI.FlatLabel flatLabel8;
+        private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.Button button63;
+        private System.Windows.Forms.Button button64;
+        private System.Windows.Forms.Button button65;
+        private System.Windows.Forms.TabPage tabPage9;
+        private FlatUI.FlatLabel flatLabel10;
+        private FlatUI.FlatLabel Display_Date;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label lic_lbl;
+        private System.Windows.Forms.Label label1;
     }
 }
 
