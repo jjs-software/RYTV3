@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\WINGS\Desktop\RYTV3\V6\</PublishUrl>
+    <PublishUrl>C:\Users\nites\Desktop\work\RYTV3\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -71,7 +71,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>0D67E1A8C89B516EDB36A053445FA5F27A313794</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>AB25B8D082B5EE381E404DE0113EF24C00974769</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>

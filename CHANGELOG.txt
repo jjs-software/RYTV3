@@ -1,0 +1,41 @@
+Changelog 
+
+
+Revison 7 (Nov 23, 2022)
+
+1. Added Auto Load List
+2. Changed Settimgs Layout
+3. Added Toggle Switch to Show / Hide Questions 
+
+Revision 6  (Sep 19, 2022)
+
+1. Added Software Licensing (Hard-Coded) Will be changed in Future Release.
+2. Other Small Fixes
+
+
+Revision 5 (Jul 29, 2022)
+
+1. Added Date-Weather-Questions
+2. Bug Fixes 
+
+Revision 4 (May 25, 2022)
+
+1.Bump System.Text.RegularExpressions from 4.3.0 to 4.3.1 
+2.Bump System.Net.Http from 4.3.0 to 4.3.4 
+3.Added: Reset Youtube list when a new list is loaded.
+
+Revision 3 (May 15, 2022) 
+
+1. Hot-Fix (Fix a bug)
+
+
+Revision 2 (May 14, 2022)
+1.Added Error & Duplicate Video Prevention
+
+
+Inital Release R1 (May 13, 2022)
+
+1. First commit
+2. Random Youtube 
+3. Choose Between 1-6 Videos (selector) 
+

@@ -4,7 +4,7 @@
   <description asmv2:iconFile="youtube-logo-png-46020-Windows.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="RYTV3" version="1.0.0.6" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="RYTV3" version="1.0.0.7" language="neutral" processorArchitecture="msil" />
     <commandLine file="RYTV3.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RYTV3.exe" size="744448">
-      <assemblyIdentity name="RYTV3" version="1.0.0.6" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RYTV3.exe" size="745368">
+      <assemblyIdentity name="RYTV3" version="1.0.0.7" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wrYjILmyC05iav9uf5XgG27h3w2CwkoBvW7v9tJLxBk=</dsig:DigestValue>
+        <dsig:DigestValue>6lay8iIjRswPnc2vPMzjo1ea3Xlt/iJIgCpelnwZeZY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
