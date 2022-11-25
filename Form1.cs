@@ -9,6 +9,7 @@ using System.Speech.Synthesis;
 using System.Net;
 using System.ComponentModel;
 using System.Net.Http;
+using System.Linq;
 
 namespace RYTV3
 {
@@ -261,11 +262,15 @@ namespace RYTV3
         /// <param name="e"></param>
         private void getVids_btn_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Reload();
+            // Clear Previous List before Displaying New List - Added In Rev
+            youtubelist.Clear();
             int choices;
             choices = Convert.ToInt32(numericUpDown1.Value);
             for (int i = 0; i < choices; i++)
             {
                 bool checkfile;
+                filePath = Properties.Settings.Default.filelocation;
                 checkfile = File.Exists(filePath);
                 if (checkfile == false)
                 {
@@ -438,6 +443,7 @@ namespace RYTV3
         private void Form1_Load_1(object sender, EventArgs e)
         {
             // set number spinner to 2
+            checkBox1.Checked = true;
             numericUpDown1.Value = 2;
             string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             build_label.Text = String.Format("version {0}", version);
@@ -1195,6 +1201,125 @@ namespace RYTV3
                 flatTabControl1.TabPages.Add(tabPage3);
             }
 
+        }
+        /// <summary>
+        ///  AUTO LIST LOADER - Added In V7 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void autoload1_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {   // get the name of the file.
+                string list1name;
+                list1name = list1_tb.Text;
+                // get current logged in user
+                string userName = System.Environment.UserName;
+                // get path to desktop
+                string sDir = @"C:\Users\" + userName + @"\Desktop\";
+                // search for these extensions
+                var extensions = new List<string> { ".txt", ".xml" };
+                string[] files = Directory.GetFiles(sDir, "*.*", SearchOption.AllDirectories)
+                                    .Where(f => extensions.IndexOf(Path.GetExtension(f)) >= 0).ToArray();
+                // DEBUG CODE REMOVE LATER.
+                Console.WriteLine("[{0}]", string.Join(", ", files));
+                if (files.Contains(sDir + list1name))
+                {
+                    Console.WriteLine("Found it");
+                    // set the full path with filename
+                    string TargetPath = sDir + list1name;
+                    // Save Settings
+                    Properties.Settings.Default.filelocation = TargetPath;
+                    Properties.Settings.Default.Save();
+                    // New Reader 
+                    using (StreamReader reader = new StreamReader(TargetPath))
+                    {    
+                        // Read to end 
+                        fileContent = reader.ReadToEnd();
+                        var videolist = File.ReadAllLines(TargetPath);
+                        var youtubelist = new List<string>(videolist);
+                        // count the number of videos 
+                        var lineCount = File.ReadAllLines(TargetPath).Length;
+                        status_lbl.ForeColor = Color.Blue;
+                        status_lbl.Text = Convert.ToString(lineCount) + " Videos Loaded";
+                        loadlist();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Could Not find File");
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Sorry unable to load the file, please try again");
+            } // end of catch
+        } // end of void 
+
+        private void autoload2_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {   // get the name of the file.
+                string list1name;
+                list1name = list2_tb.Text;
+                // get current logged in user
+                string userName = System.Environment.UserName;
+                // get path to desktop
+                string sDir = @"C:\Users\" + userName + @"\Desktop\";
+                // search for these extensions
+                var extensions = new List<string> { ".txt", ".xml" };
+                string[] files = Directory.GetFiles(sDir, "*.*", SearchOption.AllDirectories)
+                                    .Where(f => extensions.IndexOf(Path.GetExtension(f)) >= 0).ToArray();
+                // DEBUG CODE REMOVE LATER.
+                Console.WriteLine("[{0}]", string.Join(", ", files));
+                if (files.Contains(sDir + list1name))
+                {
+                    Console.WriteLine("Found it");
+                    // set the full path with filename
+                    string TargetPath = sDir + list1name;
+                    // Save Settings
+                    Properties.Settings.Default.filelocation = TargetPath;
+                    Properties.Settings.Default.Save();
+                    // New Reader 
+                    using (StreamReader reader = new StreamReader(TargetPath))
+                    {
+                        // Read to end 
+                        fileContent = reader.ReadToEnd();
+                        var videolist = File.ReadAllLines(TargetPath);
+                        var youtubelist = new List<string>(videolist);
+                        // count the number of videos 
+                        var lineCount = File.ReadAllLines(TargetPath).Length;
+                        status_lbl.ForeColor = Color.Blue;
+                        status_lbl.Text = Convert.ToString(lineCount) + " Videos Loaded";
+                        loadlist();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Could Not find File");
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Sorry unable to load the file, please try again");
+            } // end of catch
+        }
+
+        private void flatToggle1_Click(object sender, EventArgs e)
+        {
+            if (flatToggle1.Checked == true)
+            {
+                flatTabControl1.TabPages.Remove(tabPage3);
+            }
+            if (flatToggle1.Checked == false)
+            {
+                flatTabControl1.TabPages.Add(tabPage3);
+            }
+        }
+
+        private void flatToggle1_CheckedChanged(object sender)
+        {
+            Console.WriteLine("Changed");
         }
     }
     }
